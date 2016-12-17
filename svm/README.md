@@ -10,3 +10,8 @@ Valid kernel types include linear, poly, rbf, or sigmoid. Note that in order to 
 
 The general intuition is that the SVM creates a loss-minimizing hyperplane between two classes using training data. It then tests by determining which side of the hyperplane your test data lies. Typically, SVM's are useful when there are fewer data points than there are features and become less useful as the number of features becomes far greater than the number of data points. 
 
+#TODO:
+
+Figure out normalization of data
+
+Figure out svm.SVC.score() method
