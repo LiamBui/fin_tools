@@ -29,6 +29,25 @@ def graph(df):
 	plt.xlabel('X values')
 	plt.show()
 
+def run(df):
+	(idxs, midprices) = zip(*get_indicators(df))
+	available_btc = 0.0 
+	pnl = 0.0
+	funds = 1000.0
+	for idx, row in df.iterrows():
+		if idx in idxs:
+			available_btc += 0.01
+			funds -= row['ask']
+			pnl -= row['ask']
+		elif row['tilt'] <= 0.1:
+			available_btc -= 0.01
+			funds += row['bid']
+			pnl += row['bid']
+		else:
+			pass
+	print 'PnL : ${:.2f}\t Funds : ${:.2f}\t Available BTC : {:.8f}'.format(pnl, funds, available_btc)
+	return
+
 def get_indicators(df):
 	indicators = []
 
@@ -42,6 +61,7 @@ def run_strat(df):
 
 def main():
 	df = get_data()
+	run(df)
 	graph(df)
 
 if __name__ == '__main__':
