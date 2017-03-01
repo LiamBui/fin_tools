@@ -1,20 +1,32 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import queue, tools, datetime
+import tools, datetime
+import Queue as queue
+import numpy as np
+import mpld3
+
+EPSILON_UPPER = 0.9
+EPSILON_LOWER = 0.1
+EPSILON_TILT_U = 0.7
+EPSILON_TILT_L = 0.3
+STOPPER = 0.99
+SELL_POINT = 1.00
+TIME_WINDOW = '3min'
+FUNDS = 100.0
+LOCATION = '../data/tilt_2017-02-25.log' #'../data/output.log' 
 
 def get_data():
-	location = '../data/output.log'
-	df = pd.read_csv(location)
+	df = pd.read_csv(LOCATION)
 
 	df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
 	df = df.set_index(df[df.columns[0]])
-	#df = df.drop(df.columns[[0]], axis=1)
-	df.columns = ['datetime','tilt','tilt_up','price_delta','bid','ask','midprice']#,'bid_size','ask_size']
-	#df.index.name = 'datetime'
+	df.columns = ['datetime','tilt','price_delta','bid','ask','midprice','bid_size','ask_size']
+	df['tilt_up'] = df['tilt'] > 0.5
+	#df.columns = ['datetime','tilt','tilt_up','price_delta','bid','ask','midprice']
 
 	return df
 
-def graph(df, indicators_buy, indicators_sell):
+def graph(df, indicators_buy, indicators_sell, buy_annotations, sell_annotations):
 
 	xs = [x[0] for x in indicators_buy]
 	ys = [x[1] for x in indicators_buy]
@@ -22,38 +34,45 @@ def graph(df, indicators_buy, indicators_sell):
 	xs1 = [x[0] for x in indicators_sell]
 	ys1 = [x[1] for x in indicators_sell]
 
-	def onpick3(event):
-		print type(event)
-		ind = event.ind
-		print event
-
 	fig = plt.figure()
 	ax1 = fig.add_subplot(111)
 
 	ax1.plot(df['datetime'], df['midprice'], color='black', label='MidPrice')
-	ax1.scatter(xs, ys, color='green', label='Buy indicators')
-	ax1.scatter(xs1, ys1, color='red', label='Sell indicators')
-	fig.canvas.mpl_connect('pick_event', onpick3)
+	buy = ax1.scatter(xs, ys, color='green', label='Buy indicators')
+	sell = ax1.scatter(xs1, ys1, color='red', label='Sell indicators')
 
-	plt.legend(loc='upper left')
-	plt.ylabel('Price (USD)')
-	plt.xlabel('Time')
-	plt.show()
+
+	tooltip = mpld3.plugins.PointLabelTooltip(buy, labels=buy_annotations)
+	mpld3.plugins.connect(fig, tooltip)
+	tooltip2 = mpld3.plugins.PointLabelTooltip(sell, labels=sell_annotations)
+	mpld3.plugins.connect(fig, tooltip2)
+
+	#plt.legend(loc='upper left')
+	#plt.ylabel('Price (USD)')
+	#plt.xlabel('Time')
+	#plt.show()
+
+
+	mpld3.show()
 
 def run(df, indicators_buy, indicators_sell, funds=1000.0):
-	(idxs_buy, _) = zip(*indicators_buy)
-	(idxs_sell, _) = zip(*indicators_sell)
-	print len(idxs_buy), len(idxs_sell)
+	(idxs_buy, ys_buy) = zip(*indicators_buy)
+	(idxs_sell, ys_sell) = zip(*indicators_sell)
+	idxs_buy, idxs_sell, ys_buy, ys_sell = list(idxs_buy), list(idxs_sell), list(ys_buy), list(ys_sell)
+
 	available_btc = 0.0 
 	pnl = 0.0
 	trades = queue.Queue()
 	last_buy = df.iloc[0]['datetime']
 	last_price = df.iloc[0]['ask']
+	tilts_buy = []
+	tilts_sell = []
 
 	for idx, row in df.iterrows():
 		if funds > row['ask'] * 0.01:
 			if idx > last_buy + datetime.timedelta(minutes=15):
 				if idx in idxs_buy:
+					tilts_buy.append(row['tilt'])
 					trades.put({'buy': True, 'time': idx, 'price': row['ask'], 'size': 0.01})
 					last_buy = idx
 					last_price = row['ask']
@@ -61,7 +80,11 @@ def run(df, indicators_buy, indicators_sell, funds=1000.0):
 					funds -= row['ask'] * 0.01
 					pnl -= row['ask'] * 0.01
 		if available_btc > 0.0:
-			if idx in idxs_sell or (row['bid'] <= last_price - 1.50 and row['tilt'] <= 0.3):
+			if idx in idxs_sell or (row['bid'] <= last_price - STOPPER) or (row['bid'] >= last_price + SELL_POINT):
+				tilts_sell.append(row['tilt'])
+				if idx not in idxs_sell: 
+					idxs_sell.append(idx)
+					ys_sell.append(row['midprice'])
 				trades.put({'buy': False, 'time': idx, 'price': row['bid'], 'size': 0.01})
 				available_btc -= 0.01
 				funds += row['bid'] * 0.01
@@ -69,14 +92,14 @@ def run(df, indicators_buy, indicators_sell, funds=1000.0):
 
 	print 'PnL : ${:.2f}\t Funds : ${:.2f}\t Available BTC : {:.8f}'.format(pnl, funds, available_btc)
 
-	return trades
+	return trades, zip(idxs_sell, ys_sell), tilts_buy, tilts_sell
 
 def get_indicators(df, buy_ratio, buy_tilt, sell_ratio, sell_tilt):
 	indicators_buy = []
 	indicators_sell = []
 
 	df = df.sort_index()
-	rolling = df['tilt_up'].rolling('10min', min_periods=1)
+	rolling = df['tilt_up'].rolling(TIME_WINDOW, min_periods=1)
 	df['indicator_buy'] = ((rolling.sum() / rolling.count()) >= buy_ratio) & (df['tilt'] >= buy_tilt)
 	df['indicator_sell'] = ((rolling.sum() / rolling.count()) <= sell_ratio) & (df['tilt'] <= sell_tilt)
 
@@ -94,10 +117,11 @@ def get_indicators(df, buy_ratio, buy_tilt, sell_ratio, sell_tilt):
 
 def main():
 	df = get_data()
-	indicators_buy, indicators_sell = get_indicators(df, 0.5, 0.95, 0.3, 0.05)
-	trades = run(df, indicators_buy, indicators_sell, funds=100.0)
-	tools.compute_statistics(trades, funds=100.0)
-	graph(df, indicators_buy, indicators_sell)
+	indicators_buy, indicators_sell = get_indicators(df, EPSILON_TILT_U, EPSILON_UPPER, EPSILON_TILT_L, EPSILON_LOWER)
+	print len(indicators_buy), len(indicators_sell)
+	trades, indicators_sell, tilts_buy, tilts_sell= run(df, indicators_buy, indicators_sell, funds=FUNDS)
+	tools.compute_statistics(trades, funds=FUNDS)
+	graph(df, indicators_buy, indicators_sell, tilts_buy, tilts_sell)
 
 if __name__ == '__main__':
 	main()
