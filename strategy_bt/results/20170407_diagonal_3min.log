@@ -1,0 +1,144 @@
+UPPER: 0.7	 LOWER: 0.05	 TILT_U: 0.7	 TILT_L: 0.05
+Number of buy indicators: 5003	 Number of sell indicators: 163
+Returns: 0.9999	 Benchmark: 1.0010	 Max Drawdown: -0.0002
+
+UPPER: 0.7	 LOWER: 0.1	 TILT_U: 0.7	 TILT_L: 0.1
+Number of buy indicators: 5003	 Number of sell indicators: 2365
+Returns: 1.0002	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.7	 LOWER: 0.15	 TILT_U: 0.7	 TILT_L: 0.15
+Number of buy indicators: 5003	 Number of sell indicators: 6029
+Returns: 1.0001	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.7	 LOWER: 0.2	 TILT_U: 0.7	 TILT_L: 0.2
+Number of buy indicators: 5003	 Number of sell indicators: 11469
+Returns: 1.0002	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.7	 LOWER: 0.25	 TILT_U: 0.7	 TILT_L: 0.25
+Number of buy indicators: 5003	 Number of sell indicators: 20671
+Returns: 1.0003	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.7	 LOWER: 0.3	 TILT_U: 0.7	 TILT_L: 0.3
+Number of buy indicators: 5003	 Number of sell indicators: 31681
+Returns: 1.0004	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.75	 LOWER: 0.05	 TILT_U: 0.75	 TILT_L: 0.05
+Number of buy indicators: 2642	 Number of sell indicators: 163
+Returns: 1.0003	 Benchmark: 1.0010	 Max Drawdown: -0.0002
+
+UPPER: 0.75	 LOWER: 0.1	 TILT_U: 0.75	 TILT_L: 0.1
+Number of buy indicators: 2642	 Number of sell indicators: 2365
+Returns: 1.0006	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.75	 LOWER: 0.15	 TILT_U: 0.75	 TILT_L: 0.15
+Number of buy indicators: 2642	 Number of sell indicators: 6029
+Returns: 1.0005	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.75	 LOWER: 0.2	 TILT_U: 0.75	 TILT_L: 0.2
+Number of buy indicators: 2642	 Number of sell indicators: 11469
+Returns: 1.0006	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.75	 LOWER: 0.25	 TILT_U: 0.75	 TILT_L: 0.25
+Number of buy indicators: 2642	 Number of sell indicators: 20671
+Returns: 1.0007	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.75	 LOWER: 0.3	 TILT_U: 0.75	 TILT_L: 0.3
+Number of buy indicators: 2642	 Number of sell indicators: 31681
+Returns: 1.0007	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.8	 LOWER: 0.05	 TILT_U: 0.8	 TILT_L: 0.05
+Number of buy indicators: 1495	 Number of sell indicators: 163
+Returns: 1.0004	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.8	 LOWER: 0.1	 TILT_U: 0.8	 TILT_L: 0.1
+Number of buy indicators: 1495	 Number of sell indicators: 2365
+Returns: 1.0006	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.8	 LOWER: 0.15	 TILT_U: 0.8	 TILT_L: 0.15
+Number of buy indicators: 1495	 Number of sell indicators: 6029
+Returns: 1.0004	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.8	 LOWER: 0.2	 TILT_U: 0.8	 TILT_L: 0.2
+Number of buy indicators: 1495	 Number of sell indicators: 11469
+Returns: 1.0004	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.8	 LOWER: 0.25	 TILT_U: 0.8	 TILT_L: 0.25
+Number of buy indicators: 1495	 Number of sell indicators: 20671
+Returns: 1.0005	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.8	 LOWER: 0.3	 TILT_U: 0.8	 TILT_L: 0.3
+Number of buy indicators: 1495	 Number of sell indicators: 31681
+Returns: 1.0006	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.85	 LOWER: 0.05	 TILT_U: 0.85	 TILT_L: 0.05
+Number of buy indicators: 902	 Number of sell indicators: 163
+Returns: 1.0002	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.85	 LOWER: 0.1	 TILT_U: 0.85	 TILT_L: 0.1
+Number of buy indicators: 902	 Number of sell indicators: 2365
+Returns: 1.0005	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.85	 LOWER: 0.15	 TILT_U: 0.85	 TILT_L: 0.15
+Number of buy indicators: 902	 Number of sell indicators: 6029
+Returns: 1.0003	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.85	 LOWER: 0.2	 TILT_U: 0.85	 TILT_L: 0.2
+Number of buy indicators: 902	 Number of sell indicators: 11469
+Returns: 1.0003	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.85	 LOWER: 0.25	 TILT_U: 0.85	 TILT_L: 0.25
+Number of buy indicators: 902	 Number of sell indicators: 20671
+Returns: 1.0004	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.85	 LOWER: 0.3	 TILT_U: 0.85	 TILT_L: 0.3
+Number of buy indicators: 902	 Number of sell indicators: 31681
+Returns: 1.0004	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.9	 LOWER: 0.05	 TILT_U: 0.9	 TILT_L: 0.05
+Number of buy indicators: 436	 Number of sell indicators: 163
+Returns: 1.0000	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.9	 LOWER: 0.1	 TILT_U: 0.9	 TILT_L: 0.1
+Number of buy indicators: 436	 Number of sell indicators: 2365
+Returns: 1.0001	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.9	 LOWER: 0.15	 TILT_U: 0.9	 TILT_L: 0.15
+Number of buy indicators: 436	 Number of sell indicators: 6029
+Returns: 0.9999	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.9	 LOWER: 0.2	 TILT_U: 0.9	 TILT_L: 0.2
+Number of buy indicators: 436	 Number of sell indicators: 11469
+Returns: 0.9999	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.9	 LOWER: 0.25	 TILT_U: 0.9	 TILT_L: 0.25
+Number of buy indicators: 436	 Number of sell indicators: 20671
+Returns: 1.0000	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.9	 LOWER: 0.3	 TILT_U: 0.9	 TILT_L: 0.3
+Number of buy indicators: 436	 Number of sell indicators: 31681
+Returns: 1.0001	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.95	 LOWER: 0.05	 TILT_U: 0.95	 TILT_L: 0.05
+Number of buy indicators: 123	 Number of sell indicators: 163
+Returns: 1.0002	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.95	 LOWER: 0.1	 TILT_U: 0.95	 TILT_L: 0.1
+Number of buy indicators: 123	 Number of sell indicators: 2365
+Returns: 1.0002	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.95	 LOWER: 0.15	 TILT_U: 0.95	 TILT_L: 0.15
+Number of buy indicators: 123	 Number of sell indicators: 6029
+Returns: 1.0002	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.95	 LOWER: 0.2	 TILT_U: 0.95	 TILT_L: 0.2
+Number of buy indicators: 123	 Number of sell indicators: 11469
+Returns: 1.0002	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.95	 LOWER: 0.25	 TILT_U: 0.95	 TILT_L: 0.25
+Number of buy indicators: 123	 Number of sell indicators: 20671
+Returns: 1.0003	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+
+UPPER: 0.95	 LOWER: 0.3	 TILT_U: 0.95	 TILT_L: 0.3
+Number of buy indicators: 123	 Number of sell indicators: 31681
+Returns: 1.0003	 Benchmark: 1.0010	 Max Drawdown: -0.0001
+

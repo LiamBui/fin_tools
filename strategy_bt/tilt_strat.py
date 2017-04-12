@@ -5,22 +5,23 @@ import Queue as queue
 import numpy as np
 import mpld3
 
-EPSILON_UPPER = 0.9
+EPSILON_UPPER = 0.5
 EPSILON_LOWER = 0.1
 EPSILON_TILT_U = 0.7
 EPSILON_TILT_L = 0.3
 STOPPER = 0.99
 SELL_POINT = 1.00
-TIME_WINDOW = '3min'
+TIME_WINDOW = '1min'
 FUNDS = 100.0
-LOCATION = '../data/tilt_2017-02-25.log' #'../data/output.log' 
+WAIT_TIME = datetime.timedelta(minutes=15)
+LOCATION = '../data/btc/20170407.csv' #'../data/output.log' 
 
 def get_data():
 	df = pd.read_csv(LOCATION)
 
 	df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
 	df = df.set_index(df[df.columns[0]])
-	df.columns = ['datetime','tilt','price_delta','bid','ask','midprice','bid_size','ask_size']
+	df.columns = ['datetime','tilt','price_delta','bid_size','bid','midprice','ask','ask_size']
 	df['tilt_up'] = df['tilt'] > 0.5
 	#df.columns = ['datetime','tilt','tilt_up','price_delta','bid','ask','midprice']
 
@@ -70,7 +71,7 @@ def run(df, indicators_buy, indicators_sell, funds=1000.0):
 
 	for idx, row in df.iterrows():
 		if funds > row['ask'] * 0.01:
-			if idx > last_buy + datetime.timedelta(minutes=15):
+			if idx > last_buy + WAIT_TIME:
 				if idx in idxs_buy:
 					tilts_buy.append(row['tilt'])
 					trades.put({'buy': True, 'time': idx, 'price': row['ask'], 'size': 0.01})
@@ -90,7 +91,7 @@ def run(df, indicators_buy, indicators_sell, funds=1000.0):
 				funds += row['bid'] * 0.01
 				pnl += row['bid'] * 0.01
 
-	print 'PnL : ${:.2f}\t Funds : ${:.2f}\t Available BTC : {:.8f}'.format(pnl, funds, available_btc)
+	# print 'PnL : ${:.2f}\t Funds : ${:.2f}\t Available BTC : {:.8f}'.format(pnl, funds, available_btc)
 
 	return trades, zip(idxs_sell, ys_sell), tilts_buy, tilts_sell
 
@@ -117,11 +118,27 @@ def get_indicators(df, buy_ratio, buy_tilt, sell_ratio, sell_tilt):
 
 def main():
 	df = get_data()
+	# for i in np.arange(0.7,0.81,0.05):
+	# 	for j in np.arange(0.20, 0.31, 0.05):
+	# 		for k in np.arange(0.7,0.81,0.05):
+	# 			for l in np.arange(0.20,0.31,0.05):
+	# 				EPSILON_UPPER = i
+	# 				EPSILON_LOWER = j
+	# 				EPSILON_TILT_U = k
+	# 				EPSILON_TILT_L = l
+	# 				print 'UPPER: {}\t LOWER: {}\t TILT_U: {}\t TILT_L: {}'.format(EPSILON_UPPER, EPSILON_LOWER, EPSILON_TILT_U, EPSILON_TILT_L)
+	# 				indicators_buy, indicators_sell = get_indicators(df, EPSILON_TILT_U, EPSILON_UPPER, EPSILON_TILT_L, EPSILON_LOWER)
+	# 				print 'Number of buy indicators: {}\t Number of sell indicators: {}'.format(len(indicators_buy), len(indicators_sell))
+	# 				trades, indicators_sell, tilts_buy, tilts_sell= run(df, indicators_buy, indicators_sell, funds=FUNDS)
+	# 				price_deltas = tools.compute_statistics(trades, funds=FUNDS)
+	# 				tools.compute_returns_benchmark_maxdrawdown(price_deltas, df, funds=FUNDS)
 	indicators_buy, indicators_sell = get_indicators(df, EPSILON_TILT_U, EPSILON_UPPER, EPSILON_TILT_L, EPSILON_LOWER)
-	print len(indicators_buy), len(indicators_sell)
+	print 'Number of buy indicators: {}\t Number of sell indicators: {}'.format(len(indicators_buy), len(indicators_sell))
 	trades, indicators_sell, tilts_buy, tilts_sell= run(df, indicators_buy, indicators_sell, funds=FUNDS)
-	tools.compute_statistics(trades, funds=FUNDS)
+	price_deltas = tools.compute_statistics(trades, funds=FUNDS)
+	tools.compute_returns_benchmark_maxdrawdown(price_deltas, df, funds=FUNDS)
 	graph(df, indicators_buy, indicators_sell, tilts_buy, tilts_sell)
+
 
 if __name__ == '__main__':
 	main()
