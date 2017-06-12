@@ -5,36 +5,24 @@ import Queue as queue
 import numpy as np
 import mpld3
 
-VERBOSE = False
+VERBOSE = True
 
 FUNDS = 100.0
 UNITS = 60 # number of seconds
 LOOKBACK = 90 * UNITS
 EPSILON_UPPER = 2.0
 EPSILON_LOWER = 2.0
-WAIT_TIME = datetime.timedelta(minutes=15)
 WAIT_SELL = datetime.timedelta(minutes=30)
 WAIT_BUY = datetime.timedelta(minutes=10)
 WAIT_PUKE = datetime.timedelta(minutes=1)
 WAIT_NEXT_BUY = datetime.timedelta(seconds=60)
-HALFLIFE = 5 * UNITS
-ALPHA = 1 - math.exp(math.log(0.5)/HALFLIFE)
+HALFLIFE = 10 * UNITS
+ALPHA = 1.0 - math.exp(math.log(0.5)/float(HALFLIFE))
 BUY_SIZE = 0.01
-SLIPPAGE_BUY = 0.005
-SLIPPAGE_SELL = 0.005
+SLIPPAGE_BUY = 0.05
+SLIPPAGE_SELL = 0.05
 
-LOCATION = '/home/lb/btc-data/2017-05-11/strategy_csv.log.2017-05-11'
-LOCATIONS = ['/home/lb/btc-data/2017-05-11/strategy_csv.log.2017-05-11',
-             '/home/lb/btc-data/2017-05-12/strategy_csv.log.2017-05-12',
-             '/home/lb/btc-data/2017-05-13/strategy_csv.log.2017-05-13',
-             '/home/lb/btc-data/2017-05-14/strategy_csv.log.2017-05-14',
-             '/home/lb/btc-data/2017-05-15/strategy_csv.log.2017-05-15',
-             '/home/lb/btc-data/2017-05-16/strategy_csv.log.2017-05-16',
-             '/home/lb/btc-data/2017-05-17/strategy_csv.log.2017-05-17',
-             '/home/lb/btc-data/2017-05-18/strategy_csv.log.2017-05-18',
-             '/home/lb/btc-data/2017-05-19/strategy_csv.log.2017-05-19',
-             '/home/lb/btc-data/2017-05-20/strategy_csv.log.2017-05-20',
-             '/home/lb/btc-data/2017-05-21/strategy_csv.log.2017-05-21']
+LOCATION = 'C:/Users/lb/fin_tools/data/btc/20170511-20170521.log'
 
 def funds_round(num, places=2, direction=math.floor):
     return direction(num * (10**places)) / float(10**places)
@@ -143,7 +131,7 @@ def get_data():
 	df['simple_ma'] = simple_rolling.mean()
 	df['simple_std'] = simple_rolling.std()
 
-	exponential_rolling = df['mid_price'].ewm(halflife=HALFLIFE, min_periods=LOOKBACK)
+	exponential_rolling = df['mid_price'].ewm(alpha=ALPHA, min_periods=LOOKBACK, adjust=False, ignore_na=True)
 
 	df['exp_ma'] = exponential_rolling.mean()
 	df['exp_std'] = exponential_rolling.std()
@@ -178,12 +166,12 @@ def graph(df, indicators_buy, indicators_sell, buy_annotations, sell_annotations
 	sell = ax1.scatter(xs1, ys1, color='red', label='Sell indicators')
 
 	# SIMPLE	
-	ax1.plot(df['datetime'], df['upper_band_simple'], color='blue', label='Upper')
-	ax1.plot(df['datetime'], df['lower_band_simple'], color='blue', label='Lower')
+	# ax1.plot(df['datetime'], df['upper_band_simple'], color='blue', label='Upper')
+	# ax1.plot(df['datetime'], df['lower_band_simple'], color='blue', label='Lower')
 
 	# EXP
-	ax1.plot(df['datetime'], df['upper_band_exp'], color='orange', label='Upper EXP')
-	ax1.plot(df['datetime'], df['lower_band_exp'], color='orange', label='Lower EXP')
+	# ax1.plot(df['datetime'], df['upper_band_exp'], color='orange', label='Upper EXP')
+	# ax1.plot(df['datetime'], df['lower_band_exp'], color='orange', label='Lower EXP')
 
 	tooltip = mpld3.plugins.PointLabelTooltip(buy, labels=buy_annotations)
 	mpld3.plugins.connect(fig, tooltip)
@@ -404,7 +392,7 @@ def update_stats_exp(new, mean, var):
 	diff = new - mean
 	incr = ALPHA * diff
 	mean = mean + incr
-	var = (1 - ALPHA) * (var + diff * incr)
+	var = (1.0 - ALPHA) * (var + diff * incr)
 	std = math.sqrt(var)
 	return mean, var, std
 
@@ -436,7 +424,7 @@ def run_exp_online(df, available_funds=1000.00):
 		avg, var, std = update_stats_exp(row['mid_price'], avg, var)
 
 		sell_stop = 2.0 * std
-		sell_point = 1.0 * std
+		sell_point = 1.2 * std
 		upper_band = avg + EPSILON_UPPER * std
 		lower_band = avg - EPSILON_LOWER * std
 
@@ -450,7 +438,7 @@ def run_exp_online(df, available_funds=1000.00):
 				price_sell = funds_round(row['mid_price'], direction=math.ceil)
 				if row['mid_price'] > upper_band and idx > last_buy + WAIT_SELL:
 					old_pnl = pnl
-					pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+					pnl, available_funds, available_btc, last_sell = buy(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
 					if old_pnl != pnl:
 						indicators_sell.append((idx, row['mid_price']))
 						sell_annotations.append(row['mid_price'])
@@ -458,7 +446,7 @@ def run_exp_online(df, available_funds=1000.00):
 
 				elif avg_entry > 0:
 					old_pnl = pnl
-					exp = pd.Timedelta(idx - last_buy).seconds / HALFLIFE
+					exp = pd.Timedelta(idx - last_buy).seconds / float(HALFLIFE)
 					if exp > 1 and row['bid_price'] > (avg_entry + sell_point / (2**int(exp))):
 						pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
 						if old_pnl != pnl:
@@ -490,6 +478,96 @@ def run_exp_online(df, available_funds=1000.00):
 						indicators_buy.append((idx, row['mid_price']))
 						buy_annotations.append(row['mid_price'])
 	
+	if VERBOSE:
+		print 'PnL: {:.2f}'.format(pnl)
+
+	return pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations
+
+
+def run_reverse_exp_online(df, available_funds=1000.00):
+
+	if VERBOSE:
+		print 'Running reverse online exponential strategy.'
+
+	indicators_buy = []
+	indicators_sell = []
+	buy_annotations = []
+	sell_annotations = []
+
+	available_btc = 0.0 
+	pnl = 0.0
+	avg_entry = 0.0
+	trades = queue.Queue()
+	last_buy = df.iloc[0]['datetime']
+	last_sell = df.iloc[0]['datetime']
+	last_price = df.iloc[0]['ask_price']
+
+	df_init = df.head(n=LOOKBACK)
+	df = df.tail(n=(len(df.index)-LOOKBACK))
+
+	avg, var, std = initialize_stats_exp(df_init)
+
+	for idx, row in df.iloc[LOOKBACK:].iterrows():
+
+		avg, var, std = update_stats_exp(row['mid_price'], avg, var)
+
+		sell_stop = 2.0 * std
+		sell_point = 1.2 * std
+		upper_band = avg + EPSILON_UPPER * std
+		lower_band = avg - EPSILON_LOWER * std
+
+		if row['num'] < 60:
+			continue
+
+		if row['mid_price'] != df.iloc[df.index.get_loc(idx)-1]['mid_price']:
+
+			# buy
+			# if idx < datetime.datetime(2017,05,11,11,33) and idx > datetime.datetime(2017,05,11,11,32):
+			# 	print 'idx: {}\tavg: {:.2f}\tstd: {:.2f}'.format(idx, avg, std)
+			price_buy = funds_round(row['mid_price'], direction=math.floor)
+			funds_required = price_buy * BUY_SIZE
+			if available_funds > funds_required:
+				if row['mid_price'] > upper_band and idx > last_sell + WAIT_BUY and idx > last_buy + WAIT_NEXT_BUY:
+					old_ae = avg_entry
+					avg_entry, available_funds, available_btc, last_buy = buy(pnl, avg_entry, available_funds, available_btc, last_buy, idx, price_buy, BUY_SIZE)
+					if old_ae != avg_entry:
+						indicators_buy.append((idx, row['mid_price']))
+						buy_annotations.append(row['mid_price'])
+						# print 'Bought. Std: {:.2f}'.format(std)
+
+			# sell
+			if available_btc > 0:
+				price_sell = funds_round(row['mid_price'], direction=math.ceil)
+				if row['mid_price'] < lower_band and idx > last_buy + WAIT_SELL:
+					old_pnl = pnl
+					pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+					if old_pnl != pnl:
+						indicators_sell.append((idx, row['mid_price']))
+						sell_annotations.append(row['mid_price'])
+					continue
+
+				elif avg_entry > 0:
+					old_pnl = pnl
+					exp = pd.Timedelta(idx - last_buy).seconds / float(HALFLIFE)
+					if exp > 1 and row['bid_price'] > (avg_entry + sell_point / (2**int(exp))):
+						pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+						if old_pnl != pnl:
+							indicators_sell.append((idx, row['mid_price']))
+							sell_annotations.append(row['mid_price'])
+						continue
+					elif exp <= 1 and row['bid_price'] > (avg_entry + sell_point):
+						pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+						if old_pnl != pnl:
+							indicators_sell.append((idx, row['mid_price']))
+							sell_annotations.append(row['mid_price'])
+						continue
+					elif row['bid_price'] < (avg_entry - sell_stop) and idx > last_buy + WAIT_PUKE:
+						pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+						if old_pnl != pnl:
+							indicators_sell.append((idx, row['mid_price']))
+							sell_annotations.append(row['mid_price'])
+						continue
+
 	if VERBOSE:
 		print 'PnL: {:.2f}'.format(pnl)
 
@@ -530,15 +608,18 @@ def run_reverse_exp(df, available_funds=1000.0):
 		if row['mid_price'] != df.iloc[df.index.get_loc(idx)-1]['mid_price']:
 
 			# buy
+			# if idx < datetime.datetime(2017,05,11,11,33) and idx > datetime.datetime(2017,05,11,11,32):
+			# 	print 'idx: {}\tavg: {:.2f}\tstd: {:.2f}'.format(idx, row['exp_ma'], row['exp_std'])
 			price_buy = funds_round(row['mid_price'], direction=math.floor)
 			funds_required = price_buy * BUY_SIZE
 			if available_funds > funds_required:
 				if row['mid_price'] > upper_band and idx > last_sell + WAIT_BUY and idx > last_buy + WAIT_NEXT_BUY:
 					old_ae = avg_entry
-					avg_entry, available_funds, available_btc, last_buy = buy(pnl, avg_entry, available_funds, available_btc, last_buy, idx, price_buy, BUY_SIZE)
+					avg_entry, available_funds, available_btc, last_buy = buy(pnl, avg_entry, available_funds, available_btc, last_buy, idx, price_buy, available_funds / price_buy)
 					if old_ae != avg_entry:
 						indicators_buy.append((idx, row['mid_price']))
 						buy_annotations.append(row['mid_price'])
+						# print 'Bought. Std: {:.2f}'.format(row['exp_std'])
 
 			# sell
 			if available_btc > 0:
@@ -581,17 +662,327 @@ def run_reverse_exp(df, available_funds=1000.0):
 
 # ----------------------------------------------------------------------------
 
+def run_reverse_exp_sellpoint(df, sell_epsilon, available_funds=1000.0):
+
+	if VERBOSE:
+		print 'Running reverse exponential Bollinger Bands strategy w/o sell point.'
+
+	indicators_buy = []
+	indicators_sell = []
+	buy_annotations = []
+	sell_annotations = []
+
+	available_btc = 0.0 
+	pnl = 0.0
+	avg_entry = 0.0
+	trades = queue.Queue()
+	last_buy = df.iloc[0]['datetime']
+	last_sell = df.iloc[0]['datetime']
+	last_price = df.iloc[0]['ask_price']
+
+	df = df.tail(n=(len(df.index)-LOOKBACK))
+
+	for idx, row in df.iloc[LOOKBACK:].iterrows():
+
+		sell_stop = 2.0 * row['exp_std']
+		sell_point = sell_epsilon * row['exp_std']
+		upper_band = row['exp_ma'] + EPSILON_UPPER * row['exp_std']
+		lower_band = row['exp_ma'] - EPSILON_LOWER * row['exp_std']
+
+		if row['num'] < 60:
+			continue
+
+		if row['mid_price'] != df.iloc[df.index.get_loc(idx)-1]['mid_price']:
+
+			# buy
+			price_buy = funds_round(row['mid_price'], direction=math.floor)
+			funds_required = price_buy * BUY_SIZE
+			if available_funds > funds_required:
+				if row['mid_price'] > upper_band and idx > last_sell + WAIT_BUY and idx > last_buy + WAIT_NEXT_BUY:
+					old_ae = avg_entry
+					avg_entry, available_funds, available_btc, last_buy = buy(pnl, avg_entry, available_funds, available_btc, last_buy, idx, price_buy, BUY_SIZE)
+					if old_ae != avg_entry:
+						indicators_buy.append((idx, row['mid_price']))
+						buy_annotations.append(row['mid_price'])
+
+			# sell
+			if available_btc > 0:
+				price_sell = funds_round(row['mid_price'], direction=math.ceil)
+				if row['mid_price'] < lower_band and idx > last_buy + WAIT_SELL:
+					old_pnl = pnl
+					pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+					if old_pnl != pnl:
+						indicators_sell.append((idx, row['mid_price']))
+						sell_annotations.append(row['mid_price'])
+
+				elif avg_entry > 0:
+					old_pnl = pnl
+					exp = pd.Timedelta(idx - last_buy).seconds / float(HALFLIFE) 
+					if exp > 1 and row['bid_price'] > (avg_entry + sell_point / (2**int(exp))):
+						pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+						if old_pnl != pnl:
+							indicators_sell.append((idx, row['mid_price']))
+							sell_annotations.append(row['mid_price'])
+						continue
+					elif exp <= 1 and row['bid_price'] > (avg_entry + sell_point):
+						pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+						if old_pnl != pnl:
+							indicators_sell.append((idx, row['mid_price']))
+							sell_annotations.append(row['mid_price'])
+						continue
+					# elif row['bid_price'] < (avg_entry - sell_stop) and idx > last_buy + WAIT_PUKE:
+					# 	pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+					# 	if old_pnl != pnl:
+					# 		indicators_sell.append((idx, row['mid_price']))
+					# 		sell_annotations.append(row['mid_price'])
+					# 	continue
+
+	if VERBOSE:
+		print 'PnL: {:.2f}'.format(pnl)
+
+	return pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations
+
+
+# ----------------------------------------------------------------------------
+
+def run_reverse_exp_sellpoint_static(df, sell_epsilon, available_funds=1000.0):
+
+	if VERBOSE:
+		print 'Running reverse exponential Bollinger Bands strategy w/o sell point.'
+
+	indicators_buy = []
+	indicators_sell = []
+	buy_annotations = []
+	sell_annotations = []
+
+	available_btc = 0.0 
+	pnl = 0.0
+	avg_entry = 0.0
+	trades = queue.Queue()
+	last_buy = df.iloc[0]['datetime']
+	last_sell = df.iloc[0]['datetime']
+	last_price = df.iloc[0]['ask_price']
+
+	df = df.tail(n=(len(df.index)-LOOKBACK))
+
+	for idx, row in df.iloc[LOOKBACK:].iterrows():
+
+		sell_stop = 2.0 * row['exp_std']
+		sell_point = sell_epsilon
+		upper_band = row['exp_ma'] + EPSILON_UPPER * row['exp_std']
+		lower_band = row['exp_ma'] - EPSILON_LOWER * row['exp_std']
+
+		if row['num'] < 60:
+			continue
+
+		if row['mid_price'] != df.iloc[df.index.get_loc(idx)-1]['mid_price']:
+
+			# buy
+			price_buy = funds_round(row['mid_price'], direction=math.floor)
+			funds_required = price_buy * BUY_SIZE
+			if available_funds > funds_required:
+				if row['mid_price'] > upper_band and idx > last_sell + WAIT_BUY and idx > last_buy + WAIT_NEXT_BUY:
+					old_ae = avg_entry
+					avg_entry, available_funds, available_btc, last_buy = buy(pnl, avg_entry, available_funds, available_btc, last_buy, idx, price_buy, BUY_SIZE)
+					if old_ae != avg_entry:
+						indicators_buy.append((idx, row['mid_price']))
+						buy_annotations.append(row['mid_price'])
+
+			# sell
+			if available_btc > 0:
+				price_sell = funds_round(row['mid_price'], direction=math.ceil)
+				if row['mid_price'] < lower_band and idx > last_buy + WAIT_SELL:
+					old_pnl = pnl
+					pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+					if old_pnl != pnl:
+						indicators_sell.append((idx, row['mid_price']))
+						sell_annotations.append(row['mid_price'])
+
+				elif avg_entry > 0:
+					old_pnl = pnl
+					exp = pd.Timedelta(idx - last_buy).seconds / float(HALFLIFE) 
+					if exp > 1 and row['bid_price'] > (avg_entry + sell_point / (2**int(exp))):
+						pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+						if old_pnl != pnl:
+							indicators_sell.append((idx, row['mid_price']))
+							sell_annotations.append(row['mid_price'])
+						continue
+					elif exp <= 1 and row['bid_price'] > (avg_entry + sell_point):
+						pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+						if old_pnl != pnl:
+							indicators_sell.append((idx, row['mid_price']))
+							sell_annotations.append(row['mid_price'])
+						continue
+					# elif row['bid_price'] < (avg_entry - sell_stop) and idx > last_buy + WAIT_PUKE:
+					# 	pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+					# 	if old_pnl != pnl:
+					# 		indicators_sell.append((idx, row['mid_price']))
+					# 		sell_annotations.append(row['mid_price'])
+					# 	continue
+
+	if VERBOSE:
+		print 'PnL: {:.2f}'.format(pnl)
+
+	return pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations
+
+# ----------------------------------------------------------------------------
+
+
+def run_reverse_exp_no_sellpoint(df, available_funds=1000.0):
+
+	if VERBOSE:
+		print 'Running reverse exponential Bollinger Bands strategy w/o sell point.'
+
+	indicators_buy = []
+	indicators_sell = []
+	buy_annotations = []
+	sell_annotations = []
+
+	available_btc = 0.0 
+	pnl = 0.0
+	avg_entry = 0.0
+	trades = queue.Queue()
+	last_buy = df.iloc[0]['datetime']
+	last_sell = df.iloc[0]['datetime']
+	last_price = df.iloc[0]['ask_price']
+
+	df = df.tail(n=(len(df.index)-LOOKBACK))
+
+	for idx, row in df.iloc[LOOKBACK:].iterrows():
+
+		upper_band = row['exp_ma'] + EPSILON_UPPER * row['exp_std']
+		lower_band = row['exp_ma'] - EPSILON_LOWER * row['exp_std']
+
+		if row['num'] < 60:
+			continue
+
+		if row['mid_price'] != df.iloc[df.index.get_loc(idx)-1]['mid_price']:
+
+			# buy
+			price_buy = funds_round(row['mid_price'], direction=math.floor)
+			funds_required = price_buy * BUY_SIZE
+			if available_funds > funds_required:
+				if row['mid_price'] > upper_band and idx > last_sell + WAIT_BUY and idx > last_buy + WAIT_NEXT_BUY:
+					old_ae = avg_entry
+					avg_entry, available_funds, available_btc, last_buy = buy(pnl, avg_entry, available_funds, available_btc, last_buy, idx, price_buy, BUY_SIZE)
+					if old_ae != avg_entry:
+						indicators_buy.append((idx, row['mid_price']))
+						buy_annotations.append(row['mid_price'])
+
+			# sell
+			if available_btc > 0:
+				price_sell = funds_round(row['mid_price'], direction=math.ceil)
+				if row['mid_price'] < lower_band and idx > last_buy + WAIT_SELL:
+					old_pnl = pnl
+					pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+					if old_pnl != pnl:
+						indicators_sell.append((idx, row['mid_price']))
+						sell_annotations.append(row['mid_price'])
+
+	if VERBOSE:
+		print 'PnL: {:.2f}'.format(pnl)
+
+	return pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations
+
+
+# ----------------------------------------------------------------------------
+
+def run_reverse_exp_stopper(df, stopper_epsilon, available_funds=1000.0):
+
+	if VERBOSE:
+		print 'Running reverse exponential Bollinger Bands strategy.'
+
+	indicators_buy = []
+	indicators_sell = []
+	buy_annotations = []
+	sell_annotations = []
+
+	available_btc = 0.0 
+	pnl = 0.0
+	avg_entry = 0.0
+	trades = queue.Queue()
+	last_buy = df.iloc[0]['datetime']
+	last_sell = df.iloc[0]['datetime']
+	last_price = df.iloc[0]['ask_price']
+
+	df = df.tail(n=(len(df.index)-LOOKBACK))
+
+	for idx, row in df.iloc[LOOKBACK:].iterrows():
+
+		sell_stop = stopper_epsilon * row['exp_std']
+		sell_point = 1.0 * row['exp_std']
+		upper_band = row['exp_ma'] + EPSILON_UPPER * row['exp_std']
+		lower_band = row['exp_ma'] - EPSILON_LOWER * row['exp_std']
+
+		if row['num'] < 60:
+			continue
+
+		if row['mid_price'] != df.iloc[df.index.get_loc(idx)-1]['mid_price']:
+
+			# buy
+			# if idx < datetime.datetime(2017,05,11,11,33) and idx > datetime.datetime(2017,05,11,11,32):
+			# 	print 'idx: {}\tavg: {:.2f}\tstd: {:.2f}'.format(idx, row['exp_ma'], row['exp_std'])
+			price_buy = funds_round(row['mid_price'], direction=math.floor)
+			funds_required = price_buy * BUY_SIZE
+			if available_funds > funds_required:
+				if row['mid_price'] > upper_band and idx > last_sell + WAIT_BUY and idx > last_buy + WAIT_NEXT_BUY:
+					old_ae = avg_entry
+					avg_entry, available_funds, available_btc, last_buy = buy(pnl, avg_entry, available_funds, available_btc, last_buy, idx, price_buy, available_funds / price_buy)
+					if old_ae != avg_entry:
+						indicators_buy.append((idx, row['mid_price']))
+						buy_annotations.append(row['mid_price'])
+						# print 'Bought. Std: {:.2f}'.format(row['exp_std'])
+
+			# sell
+			if available_btc > 0:
+				price_sell = funds_round(row['mid_price'], direction=math.ceil)
+				if row['mid_price'] < lower_band and idx > last_buy + WAIT_SELL:
+					old_pnl = pnl
+					pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+					if old_pnl != pnl:
+						indicators_sell.append((idx, row['mid_price']))
+						sell_annotations.append(row['mid_price'])
+					continue
+
+				elif avg_entry > 0:
+					old_pnl = pnl
+					exp = pd.Timedelta(idx - last_buy).seconds / HALFLIFE
+					if exp > 1 and row['bid_price'] > (avg_entry + sell_point / (2**int(exp))):
+						pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+						if old_pnl != pnl:
+							indicators_sell.append((idx, row['mid_price']))
+							sell_annotations.append(row['mid_price'])
+						continue
+					elif exp <= 1 and row['bid_price'] > (avg_entry + sell_point):
+						pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+						if old_pnl != pnl:
+							indicators_sell.append((idx, row['mid_price']))
+							sell_annotations.append(row['mid_price'])
+						continue
+					elif row['bid_price'] < (avg_entry - sell_stop) and idx > last_buy + WAIT_PUKE:
+						pnl, available_funds, available_btc, last_sell = sell(pnl, avg_entry, available_funds, available_btc, last_sell, idx, price_sell, available_btc)
+						if old_pnl != pnl:
+							indicators_sell.append((idx, row['mid_price']))
+							sell_annotations.append(row['mid_price'])
+						continue
+
+	if VERBOSE:
+		print 'PnL: {:.2f}'.format(pnl)
+
+	return pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations
+
+
+# ----------------------------------------------------------------------------
+
+
 # def main():
 # 	df = get_data()
 
 # 	returns = []
 # 	# pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations = run_simple(df, available_funds=FUNDS)
-# 	# graph(df, indicators_buy, indicators_sell, buy_annotations, sell_annotations)
 
-# 	for i in range(1,4):
-# 		# print 'Iteration {}'.format(i)
-# 		pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations = run_exp(df, available_funds=FUNDS)
-# 		returns.append(pnl)
+# 	pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations = run_reverse_exp(df, available_funds=FUNDS)
+# 	returns.append(pnl)
 
 # 	avg = np.mean(returns)
 # 	std = np.std(returns)
@@ -600,27 +991,151 @@ def run_reverse_exp(df, available_funds=1000.0):
 # 	print LOCATION
 # 	print 'Average return: {:.2f}\t Std: {:.2f}\t Min: {:.2f}\t Max: {:.2f}'.format(avg, std, min_return, max_return)
 # 	# graph_simple(df)
+# 	# print 'buy indicators: {}, buy annotations: {}'.format(len(indicators_buy), len(buy_annotations))
+# 	# print 'sell indicators: {}, sell annotations: {}'.format(len(indicators_sell), len(sell_annotations))
+# 	# graph(df, indicators_buy, indicators_sell, buy_annotations, sell_annotations)
 
 # 	print 'Done'
 
 # if __name__ == '__main__':
 # 	main()
 
+
 df = get_data()
-for x in LOCATIONS:
-	for half in [i * UNITS for i in range(1,21)]:
-		LOCATION = x
-		HALFLIFE = half
 
-		returns = []
+# returns = []
 
-		for i in range(1,4):
-			pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations = run_reverse_exp(df, available_funds=FUNDS)
-			returns.append(pnl)
+# print 'Running with epsilon 1.5 on both sides.'
+# EPSILON_LOWER = 1.5
+# EPSILON_UPPER = 1.5
 
-		avg = np.mean(returns)
-		std = np.std(returns)
-		min_return = np.min(returns)
-		max_return = np.max(returns)
-		print 'Location: {}\n Halflife: {}'.format(LOCATION, HALFLIFE / UNITS)
-		print 'Average return: {:.2f}\t Std: {:.2f}\t Min: {:.2f}\t Max: {:.2f}'.format(avg, std, min_return, max_return)
+# for i in range(1,11):
+# 	pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations = run_reverse_exp(df, available_funds=FUNDS)
+# 	returns.append(pnl)
+
+# avg = np.mean(returns)
+# std = np.std(returns)
+# min_return = np.min(returns)
+# max_return = np.max(returns)
+
+# print 'Average return: {:.2f}\t Std: {:.2f}\t Min: {:.2f}\t Max: {:.2f}\n'.format(avg, std, min_return, max_return)
+
+
+# print '--------------------------------------------' 
+
+# returns = []
+# EPSILON_LOWER = 2.0
+# EPSILON_UPPER = 2.0
+
+# print 'Finding optimal halflife.'
+# for i in range(2,41,2):
+# 	HALFLIFE = i * UNITS
+# 	for j in range(1,6):
+# 		pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations = run_reverse_exp(df, available_funds=FUNDS)
+# 		returns.append(pnl)
+# 	avg = np.mean(returns)
+# 	std = np.std(returns)
+# 	min_return = np.min(returns)
+# 	max_return = np.max(returns)
+# 	print 'Halflife: {}'.format(HALFLIFE / UNITS)
+# 	print 'Average return: {:.2f}\t Std: {:.2f}\t Min: {:.2f}\t Max: {:.2f}\n'.format(avg, std, min_return, max_return)
+
+# print '--------------------------------------------' 
+
+# print 'Effect of no sell point'
+
+# returns = []
+# HALFLIFE = 10 * UNITS
+
+# for i in range(1,11):
+# 	pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations = run_reverse_exp_no_sellpoint(df, available_funds=FUNDS)
+# 	returns.append(pnl)
+
+# avg = np.mean(returns)
+# std = np.std(returns)
+# min_return = np.min(returns)
+# max_return = np.max(returns)
+
+# print 'Average return: {:.2f}\t Std: {:.2f}\t Min: {:.2f}\t Max: {:.2f}\n'.format(avg, std, min_return, max_return)
+
+# print '--------------------------------------------' 
+
+# print 'Effect of static sell point'
+
+# returns = []
+# for i in range(1,102,10):
+# 	for j in range(1,6):
+# 		pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations = run_reverse_exp_sellpoint_static(df, i, available_funds=FUNDS)
+# 		returns.append(pnl)
+# 	avg = np.mean(returns)
+# 	std = np.std(returns)
+# 	min_return = np.min(returns)
+# 	max_return = np.max(returns)
+# 	print 'Sell Point: {}'.format(i)
+# 	print 'Average return: {:.2f}\t Std: {:.2f}\t Min: {:.2f}\t Max: {:.2f}\n'.format(avg, std, min_return, max_return)
+
+
+# print '--------------------------------------------' 
+
+# print 'Effect of dynamic sell point'
+
+# returns = []
+# for i in np.arange(1.0, 3.1, 0.2):
+# 	for j in range(1,6):
+# 		pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations = run_reverse_exp_sellpoint(df, i, available_funds=FUNDS)
+# 		returns.append(pnl)
+# 	avg = np.mean(returns)
+# 	std = np.std(returns)
+# 	min_return = np.min(returns)
+# 	max_return = np.max(returns)
+# 	print 'Sell Point Epsilon: {}'.format(i)
+# 	print 'Average return: {:.2f}\t Std: {:.2f}\t Min: {:.2f}\t Max: {:.2f}\n'.format(avg, std, min_return, max_return)
+
+print '--------------------------------------------' 
+
+print 'Effect of stopper'
+returns = []
+for i in np.arange(1.0, 3.1, 0.2):
+	for j in range(1,6):
+		pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations = run_reverse_exp_stopper(df, i, available_funds=FUNDS)
+		returns.append(pnl)
+	avg = np.mean(returns)
+	std = np.std(returns)
+	min_return = np.min(returns)
+	max_return = np.max(returns)
+	print 'Stopper Epsilon: {}'.format(i)
+	print 'Average return: {:.2f}\t Std: {:.2f}\t Min: {:.2f}\t Max: {:.2f}\n'.format(avg, std, min_return, max_return)
+
+print '--------------------------------------------' 
+
+print 'Effect of epsilon upper'
+returns = []
+for i in np.arange(0.6,2.5,0.2):
+	EPSILON_UPPER = i
+	for j in range(1,6):
+		pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations = run_reverse_exp(df, available_funds=FUNDS)
+		returns.append(pnl)
+	avg = np.mean(returns)
+	std = np.std(returns)
+	min_return = np.min(returns)
+	max_return = np.max(returns)
+	print 'Epsilon Upper: {}'.format(i)
+	print 'Average return: {:.2f}\t Std: {:.2f}\t Min: {:.2f}\t Max: {:.2f}\n'.format(avg, std, min_return, max_return)
+
+
+print '--------------------------------------------' 
+
+print 'Effect of epsilon lower'
+returns = []
+EPSILON_UPPER = 2.0
+for i in np.arange(0.6,2.5,0.2):
+	EPSILON_LOWER = i
+	for j in range(1,6):
+		pnl, indicators_buy, indicators_sell, buy_annotations, sell_annotations = run_reverse_exp(df, available_funds=FUNDS)
+		returns.append(pnl)
+	avg = np.mean(returns)
+	std = np.std(returns)
+	min_return = np.min(returns)
+	max_return = np.max(returns)
+	print 'Epsilon Lower: {}'.format(i)
+	print 'Average return: {:.2f}\t Std: {:.2f}\t Min: {:.2f}\t Max: {:.2f}\n'.format(avg, std, min_return, max_return)
