@@ -93,18 +93,19 @@ class ReverseExpStrategy(object):
 	def sell(self, idx, size_sell, price_sell):
 
 		if self.trader.sell_fill(size_sell, price_sell):
-			self.environment.pnl = update_pnl(self.environment.pnl, self.avg_entry, price_sell, size_sell)
+			self.environment.pnl = update_pnl(self.environment.pnl, self.avg_entry, price_sell, size_sell) - 0.04
 			self.environment.add_to_pnls(self.environment.pnl)
 			self.environment.available_btc -= size_sell
-			self.environment.available_funds += size_sell * price_sell
+			self.environment.available_funds += size_sell * price_sell - 0.04
 			self.last_sell = idx
 			self.environment.add_to_trades(idx, -size_sell, price_sell)
+			self.environment.add_to_returns(self.environment.available_funds + self.environment.available_btc * price_sell)
 
 			self.sell_indicators.append((idx, price_sell))
 			self.sell_annotations.append(price_sell)
 
 			if self.verbose:
-				print '{}: Bought {:.8f} @ {:.2f}. pnl: {:.2f}'.format(idx, size_sell, price_sell, self.environment.pnl)
+				print '{}: Sold {:.8f} @ {:.2f}. pnl: {:.2f}'.format(idx, size_sell, price_sell, self.environment.pnl)
 
 	def run(self):
 
@@ -147,8 +148,8 @@ class ReverseExpStrategy(object):
 						size_sell = self.environment.available_btc
 						if row['mid_price'] < lower_band and idx > self.last_buy + self.wait_sell:
 							self.sell(idx, size_sell, price_sell)
-						elif row['mid_price'] < self.avg_entry - stoppage_amt and idx > self.last_buy + self.wait_puke:
-							self.sell(idx, size_sell, price_sell)
+						# elif row['mid_price'] < self.avg_entry - stoppage_amt and idx > self.last_buy + self.wait_puke:
+						# 	self.sell(idx, size_sell, price_sell)
 
 			if self.verbose:
 				print 'Done. Final pnl: {:.2f}'.format(self.environment.pnl)

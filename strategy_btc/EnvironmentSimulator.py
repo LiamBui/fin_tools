@@ -5,20 +5,23 @@ class EnvironmentSimulator(object):
 
 		self._original_funding = funds
 		self._original_btc = btc
-
 		self._locations = locations
+
 		self._available_funds = funds
 		self._available_btc = btc
 		self._pnl = 0.0
-		self.trades = Queue.Queue()
+		self.trades = []
 		self.pnls = [0.0]
+		self.returns = [funds]
 
 	def reinit(self):
+
 		self._available_funds = self._original_funding
 		self._available_btc = self._original_btc
 		self._pnl = 0.0
-		self.trades = Queue.Queue()
-		self.pnls = [0.0]		
+		self.trades = []
+		self.pnls = [0.0]
+		self.returns = [self._original_funding]
 
 	@property
 	def locations(self):
@@ -53,7 +56,10 @@ class EnvironmentSimulator(object):
 		self._pnl = x
 
 	def add_to_trades(self, time, size, price):
-		self.trades.put({'time': time, 'size': size, 'price': price})
+		self.trades.append({'time': time, 'size': size, 'price': price})
 
 	def add_to_pnls(self, pnl):
 		self.pnls.append(pnl)
+
+	def add_to_returns(self, ret):
+		self.returns.append(ret)

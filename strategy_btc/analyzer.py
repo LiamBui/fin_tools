@@ -24,6 +24,8 @@ class Analyzer(object):
 
 	def run(self):
 
+		self.environment.reinit()
+
 		self.overall_days = self.find_total_days()
 		self.overall_returns = []
 		self.overall_prob_win = []
@@ -37,8 +39,12 @@ class Analyzer(object):
 		self.overall_med_wins = []
 		self.overall_med_losses = []
 		self.overall_max_dds = []
+		self.peak = None
+		self.trough = None
 
 		for i in range(self.iterations):
+
+			self.environment.reinit()
 
 			self.strategy.run()
 
@@ -76,11 +82,16 @@ class Analyzer(object):
 			self.overall_med_wins.append(np.median(wins))
 			self.overall_med_losses.append(np.median(losses))
 
-			i = np.argmax(np.maximum.accumulate(self.environment.pnls) - self.environment.pnls) # end of max dd period
-			j = np.argmax(self.environment.pnls[:i]) # start of max dd period
-			peak = self.environment.pnls[j]
-			trough = self.environment.pnls[i]
-			self.overall_max_dds.append((trough - peak) / peak)
+			i = np.argmax(np.maximum.accumulate(self.environment.returns) - self.environment.returns) # end of max dd period
+			j = np.argmax(self.environment.returns[:i]) # start of max dd period
+			peak = self.environment.returns[j]
+			trough = self.environment.returns[i]
+			dd = (trough - peak) / peak
+			self.overall_max_dds.append(dd)
+			if dd >= np.max(self.overall_max_dds):
+				sells = filter(lambda x: x['size'] < 0, self.environment.trades)
+				self.peak = sells[j]['time']
+				self.trough = sells[i-1]['time']
 
 			self.environment.reinit()
 
@@ -99,17 +110,27 @@ class Analyzer(object):
 
 		print '\t \t --------- Analysis Report ---------'
 		print str(self.strategy)
-
+		print '\t ---------------------------------------------'
 		print 'Total number of days analyzed: \t {}'.format(self.overall_days)
 		print 'Average number of trades: \t {:.2f}'.format(avg_num_trades)
 		print 'Average return: \t {:.2f}'.format(avg_return)
+		print 'Median return: \t {:.2f}'.format(np.median(self.overall_returns))
+		print 'Standard deviation of returns: \t {:.2f}'.format(np.std(self.overall_returns))
 		print 'Average win probability: \t {:.2f}'.format(avg_prob_win)
 		print 'Average loss probability: \t {:.2f}'.format(avg_prob_loss)
+		print 'Median win probability: \t {:.2f}'.format(np.median(self.overall_prob_win))
+		print 'Median loss probability: \t {:.2f}'.format(np.median(self.overall_prob_loss))
 		print 'Average win amount: \t {:.2f}'.format(avg_win_amt)
 		print 'Average loss amount: \t {:.2f}'.format(avg_loss_amt)
-		print 'Average expected value: \t {:.2f}'.format(avg_ev)
+		print 'Median win amount: \t {:.2f}'.format(med_win)
+		print 'Median loss amount: \t {:.2f}'.format(med_loss)
 		print 'Average highest win: \t {:.2f}'.format(avg_max_win)
 		print 'Average lowest loss: \t {:.2f}'.format(avg_min_loss)
-		print 'Median win: \t {:.2f}'.format(med_win)
-		print 'Median loss: \t {:.2f}'.format(med_loss)
+		print 'Median highest win: \t {:.2f}'.format(np.median(self.overall_max_wins))
+		print 'Median lowest loss: \t {:.2f}'.format(np.median(self.overall_min_losses))
+		print 'Average expected value: \t {:.2f}'.format(avg_ev)
+		print 'Median expected value: \t {:.2f}'.format(self.overall_ev)
 		print 'Average maximum drawdown: \t {:.2f}'.format(avg_max_dd)
+		print 'Median maximum drawdown: \t {:.2f}'.format(np.median(self.overall_max_dds))
+		print 'Time of maximum drawdown: \t {} to {}'.format(self.peak, self.trough)
+		print ''
