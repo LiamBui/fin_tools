@@ -73,6 +73,7 @@ class ReverseExpDualBandStrategy(object):
 		df_init = df.head(n=self.lookback)
 		df = df.tail(n=(len(df.index)-self.lookback))
 		self.mean, self.var, self.std = self.initialize_stats_exp(df_init, halflife=self.halflife)
+		self.mean2, self.var2, self.std2 = self.initialize_stats_exp(df_init, halflife=self.halflife2)
 
 		return df.iloc[self.lookback:]
 
