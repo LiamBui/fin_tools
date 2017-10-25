@@ -1,0 +1,969 @@
+Epsilon upper: 0.2 	 Epsilon lower: 0.2 	 Epsilon double upper: 1.5
+Average return: 3.72	 Std: 0.00	 Min: 3.72	 Max: 3.72
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.0
+Average return: 4.18	 Std: 0.00	 Min: 4.18	 Max: 4.18
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.5
+Average return: 0.79	 Std: 0.00	 Min: 0.79	 Max: 0.79
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.2 	 Epsilon double upper: 3.0
+Average return: 4.46	 Std: 0.00	 Min: 4.46	 Max: 4.46
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.2 	 Epsilon double upper: 1.5
+Average return: -6.59	 Std: 0.00	 Min: -6.59	 Max: -6.59
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.0
+Average return: 3.51	 Std: 0.00	 Min: 3.51	 Max: 3.51
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.5
+Average return: -2.24	 Std: 0.00	 Min: -2.24	 Max: -2.24
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.2 	 Epsilon double upper: 3.0
+Average return: -4.14	 Std: 0.00	 Min: -4.14	 Max: -4.14
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.2 	 Epsilon double upper: 1.5
+Average return: 0.96	 Std: 0.00	 Min: 0.96	 Max: 0.96
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.0
+Average return: 7.12	 Std: 0.00	 Min: 7.12	 Max: 7.12
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.5
+Average return: 1.51	 Std: 0.00	 Min: 1.51	 Max: 1.51
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.2 	 Epsilon double upper: 3.0
+Average return: 2.77	 Std: 0.00	 Min: 2.77	 Max: 2.77
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.2 	 Epsilon double upper: 1.5
+Average return: -5.45	 Std: 0.00	 Min: -5.45	 Max: -5.45
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.0
+Average return: -4.36	 Std: 0.00	 Min: -4.36	 Max: -4.36
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.5
+Average return: -0.87	 Std: 0.00	 Min: -0.87	 Max: -0.87
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.2 	 Epsilon double upper: 3.0
+Average return: -0.91	 Std: 0.00	 Min: -0.91	 Max: -0.91
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.2 	 Epsilon double upper: 1.5
+Average return: 5.80	 Std: 0.00	 Min: 5.80	 Max: 5.80
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.0
+Average return: 3.17	 Std: 0.00	 Min: 3.17	 Max: 3.17
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.5
+Average return: 2.86	 Std: 0.00	 Min: 2.86	 Max: 2.86
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.2 	 Epsilon double upper: 3.0
+Average return: 9.82	 Std: 0.00	 Min: 9.82	 Max: 9.82
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.2 	 Epsilon double upper: 1.5
+Average return: 2.71	 Std: 0.00	 Min: 2.71	 Max: 2.71
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.0
+Average return: 10.67	 Std: 0.00	 Min: 10.67	 Max: 10.67
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.5
+Average return: 6.96	 Std: 0.00	 Min: 6.96	 Max: 6.96
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.2 	 Epsilon double upper: 3.0
+Average return: 4.03	 Std: 0.00	 Min: 4.03	 Max: 4.03
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.2 	 Epsilon double upper: 1.5
+Average return: -3.90	 Std: 0.00	 Min: -3.90	 Max: -3.90
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.0
+Average return: 4.36	 Std: 0.00	 Min: 4.36	 Max: 4.36
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.5
+Average return: 4.31	 Std: 0.00	 Min: 4.31	 Max: 4.31
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.2 	 Epsilon double upper: 3.0
+Average return: 6.37	 Std: 0.00	 Min: 6.37	 Max: 6.37
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.2 	 Epsilon double upper: 1.5
+Average return: 0.96	 Std: 0.00	 Min: 0.96	 Max: 0.96
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.0
+Average return: 0.76	 Std: 0.00	 Min: 0.76	 Max: 0.76
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.5
+Average return: 6.63	 Std: 0.00	 Min: 6.63	 Max: 6.63
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.2 	 Epsilon double upper: 3.0
+Average return: 8.82	 Std: 0.00	 Min: 8.82	 Max: 8.82
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.2 	 Epsilon double upper: 1.5
+Average return: -1.60	 Std: 0.00	 Min: -1.60	 Max: -1.60
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.0
+Average return: 0.96	 Std: 0.00	 Min: 0.96	 Max: 0.96
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.5
+Average return: 3.52	 Std: 0.00	 Min: 3.52	 Max: 3.52
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.2 	 Epsilon double upper: 3.0
+Average return: 3.21	 Std: 0.00	 Min: 3.21	 Max: 3.21
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.2 	 Epsilon double upper: 1.5
+Average return: 5.13	 Std: 0.00	 Min: 5.13	 Max: 5.13
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.0
+Average return: -0.91	 Std: 0.00	 Min: -0.91	 Max: -0.91
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.2 	 Epsilon double upper: 2.5
+Average return: 2.24	 Std: 0.00	 Min: 2.24	 Max: 2.24
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.2 	 Epsilon double upper: 3.0
+Average return: 4.21	 Std: 0.00	 Min: 4.21	 Max: 4.21
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.4 	 Epsilon double upper: 1.5
+Average return: -2.57	 Std: 0.00	 Min: -2.57	 Max: -2.57
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.0
+Average return: 6.98	 Std: 0.00	 Min: 6.98	 Max: 6.98
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.5
+Average return: 8.79	 Std: 0.00	 Min: 8.79	 Max: 8.79
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.4 	 Epsilon double upper: 3.0
+Average return: 5.58	 Std: 0.00	 Min: 5.58	 Max: 5.58
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.4 	 Epsilon double upper: 1.5
+Average return: 4.32	 Std: 0.00	 Min: 4.32	 Max: 4.32
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.0
+Average return: 5.39	 Std: 0.00	 Min: 5.39	 Max: 5.39
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.5
+Average return: -1.94	 Std: 0.00	 Min: -1.94	 Max: -1.94
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.4 	 Epsilon double upper: 3.0
+Average return: -10.24	 Std: 0.00	 Min: -10.24	 Max: -10.24
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.4 	 Epsilon double upper: 1.5
+Average return: 1.16	 Std: 0.00	 Min: 1.16	 Max: 1.16
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.0
+Average return: -3.54	 Std: 0.00	 Min: -3.54	 Max: -3.54
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.5
+Average return: 7.34	 Std: 0.00	 Min: 7.34	 Max: 7.34
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.4 	 Epsilon double upper: 3.0
+Average return: 4.15	 Std: 0.00	 Min: 4.15	 Max: 4.15
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.4 	 Epsilon double upper: 1.5
+Average return: 0.88	 Std: 0.00	 Min: 0.88	 Max: 0.88
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.0
+Average return: -6.73	 Std: 0.00	 Min: -6.73	 Max: -6.73
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.5
+Average return: -4.02	 Std: 0.00	 Min: -4.02	 Max: -4.02
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.4 	 Epsilon double upper: 3.0
+Average return: 6.53	 Std: 0.00	 Min: 6.53	 Max: 6.53
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.4 	 Epsilon double upper: 1.5
+Average return: 3.73	 Std: 0.00	 Min: 3.73	 Max: 3.73
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.0
+Average return: -0.41	 Std: 0.00	 Min: -0.41	 Max: -0.41
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.5
+Average return: 3.47	 Std: 0.00	 Min: 3.47	 Max: 3.47
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.4 	 Epsilon double upper: 3.0
+Average return: 2.43	 Std: 0.00	 Min: 2.43	 Max: 2.43
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.4 	 Epsilon double upper: 1.5
+Average return: -1.38	 Std: 0.00	 Min: -1.38	 Max: -1.38
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.0
+Average return: 12.12	 Std: 0.00	 Min: 12.12	 Max: 12.12
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.5
+Average return: 5.98	 Std: 0.00	 Min: 5.98	 Max: 5.98
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.4 	 Epsilon double upper: 3.0
+Average return: 3.18	 Std: 0.00	 Min: 3.18	 Max: 3.18
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.4 	 Epsilon double upper: 1.5
+Average return: 1.90	 Std: 0.00	 Min: 1.90	 Max: 1.90
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.0
+Average return: 7.17	 Std: 0.00	 Min: 7.17	 Max: 7.17
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.5
+Average return: 0.95	 Std: 0.00	 Min: 0.95	 Max: 0.95
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.4 	 Epsilon double upper: 3.0
+Average return: -1.02	 Std: 0.00	 Min: -1.02	 Max: -1.02
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.4 	 Epsilon double upper: 1.5
+Average return: -3.37	 Std: 0.00	 Min: -3.37	 Max: -3.37
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.0
+Average return: 1.48	 Std: 0.00	 Min: 1.48	 Max: 1.48
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.5
+Average return: 9.04	 Std: 0.00	 Min: 9.04	 Max: 9.04
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.4 	 Epsilon double upper: 3.0
+Average return: -3.91	 Std: 0.00	 Min: -3.91	 Max: -3.91
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.4 	 Epsilon double upper: 1.5
+Average return: 9.14	 Std: 0.00	 Min: 9.14	 Max: 9.14
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.0
+Average return: 6.81	 Std: 0.00	 Min: 6.81	 Max: 6.81
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.5
+Average return: -5.32	 Std: 0.00	 Min: -5.32	 Max: -5.32
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.4 	 Epsilon double upper: 3.0
+Average return: -0.36	 Std: 0.00	 Min: -0.36	 Max: -0.36
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.4 	 Epsilon double upper: 1.5
+Average return: 5.96	 Std: 0.00	 Min: 5.96	 Max: 5.96
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.0
+Average return: -0.19	 Std: 0.00	 Min: -0.19	 Max: -0.19
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.4 	 Epsilon double upper: 2.5
+Average return: 3.16	 Std: 0.00	 Min: 3.16	 Max: 3.16
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.4 	 Epsilon double upper: 3.0
+Average return: 5.52	 Std: 0.00	 Min: 5.52	 Max: 5.52
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.6 	 Epsilon double upper: 1.5
+Average return: -5.15	 Std: 0.00	 Min: -5.15	 Max: -5.15
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.0
+Average return: -4.85	 Std: 0.00	 Min: -4.85	 Max: -4.85
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.5
+Average return: 2.02	 Std: 0.00	 Min: 2.02	 Max: 2.02
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.6 	 Epsilon double upper: 3.0
+Average return: 1.66	 Std: 0.00	 Min: 1.66	 Max: 1.66
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.6 	 Epsilon double upper: 1.5
+Average return: -2.81	 Std: 0.00	 Min: -2.81	 Max: -2.81
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.0
+Average return: 3.23	 Std: 0.00	 Min: 3.23	 Max: 3.23
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.5
+Average return: 0.71	 Std: 0.00	 Min: 0.71	 Max: 0.71
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.6 	 Epsilon double upper: 3.0
+Average return: 6.17	 Std: 0.00	 Min: 6.17	 Max: 6.17
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.6 	 Epsilon double upper: 1.5
+Average return: -3.33	 Std: 0.00	 Min: -3.33	 Max: -3.33
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.0
+Average return: -5.11	 Std: 0.00	 Min: -5.11	 Max: -5.11
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.5
+Average return: 5.21	 Std: 0.00	 Min: 5.21	 Max: 5.21
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.6 	 Epsilon double upper: 3.0
+Average return: -6.34	 Std: 0.00	 Min: -6.34	 Max: -6.34
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.6 	 Epsilon double upper: 1.5
+Average return: 1.86	 Std: 0.00	 Min: 1.86	 Max: 1.86
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.0
+Average return: 10.55	 Std: 0.00	 Min: 10.55	 Max: 10.55
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.5
+Average return: -2.02	 Std: 0.00	 Min: -2.02	 Max: -2.02
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.6 	 Epsilon double upper: 3.0
+Average return: -2.63	 Std: 0.00	 Min: -2.63	 Max: -2.63
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.6 	 Epsilon double upper: 1.5
+Average return: 2.50	 Std: 0.00	 Min: 2.50	 Max: 2.50
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.0
+Average return: 2.14	 Std: 0.00	 Min: 2.14	 Max: 2.14
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.5
+Average return: 1.42	 Std: 0.00	 Min: 1.42	 Max: 1.42
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.6 	 Epsilon double upper: 3.0
+Average return: 9.72	 Std: 0.00	 Min: 9.72	 Max: 9.72
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.6 	 Epsilon double upper: 1.5
+Average return: 5.61	 Std: 0.00	 Min: 5.61	 Max: 5.61
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.0
+Average return: 1.19	 Std: 0.00	 Min: 1.19	 Max: 1.19
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.5
+Average return: 0.66	 Std: 0.00	 Min: 0.66	 Max: 0.66
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.6 	 Epsilon double upper: 3.0
+Average return: 3.03	 Std: 0.00	 Min: 3.03	 Max: 3.03
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.6 	 Epsilon double upper: 1.5
+Average return: 4.44	 Std: 0.00	 Min: 4.44	 Max: 4.44
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.0
+Average return: 7.73	 Std: 0.00	 Min: 7.73	 Max: 7.73
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.5
+Average return: 3.99	 Std: 0.00	 Min: 3.99	 Max: 3.99
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.6 	 Epsilon double upper: 3.0
+Average return: 0.04	 Std: 0.00	 Min: 0.04	 Max: 0.04
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.6 	 Epsilon double upper: 1.5
+Average return: -0.54	 Std: 0.00	 Min: -0.54	 Max: -0.54
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.0
+Average return: 13.11	 Std: 0.00	 Min: 13.11	 Max: 13.11
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.5
+Average return: 1.71	 Std: 0.00	 Min: 1.71	 Max: 1.71
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.6 	 Epsilon double upper: 3.0
+Average return: 3.37	 Std: 0.00	 Min: 3.37	 Max: 3.37
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.6 	 Epsilon double upper: 1.5
+Average return: 3.97	 Std: 0.00	 Min: 3.97	 Max: 3.97
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.0
+Average return: 1.08	 Std: 0.00	 Min: 1.08	 Max: 1.08
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.5
+Average return: 7.97	 Std: 0.00	 Min: 7.97	 Max: 7.97
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.6 	 Epsilon double upper: 3.0
+Average return: 7.47	 Std: 0.00	 Min: 7.47	 Max: 7.47
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.6 	 Epsilon double upper: 1.5
+Average return: -3.40	 Std: 0.00	 Min: -3.40	 Max: -3.40
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.0
+Average return: 6.86	 Std: 0.00	 Min: 6.86	 Max: 6.86
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.6 	 Epsilon double upper: 2.5
+Average return: -0.94	 Std: 0.00	 Min: -0.94	 Max: -0.94
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.6 	 Epsilon double upper: 3.0
+Average return: 0.71	 Std: 0.00	 Min: 0.71	 Max: 0.71
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.8 	 Epsilon double upper: 1.5
+Average return: -4.43	 Std: 0.00	 Min: -4.43	 Max: -4.43
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.0
+Average return: -2.80	 Std: 0.00	 Min: -2.80	 Max: -2.80
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.5
+Average return: 0.89	 Std: 0.00	 Min: 0.89	 Max: 0.89
+
+Epsilon upper: 0.2 	 Epsilon lower: 0.8 	 Epsilon double upper: 3.0
+Average return: 9.07	 Std: 0.00	 Min: 9.07	 Max: 9.07
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.8 	 Epsilon double upper: 1.5
+Average return: 6.03	 Std: 0.00	 Min: 6.03	 Max: 6.03
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.0
+Average return: 4.21	 Std: 0.00	 Min: 4.21	 Max: 4.21
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.5
+Average return: 0.78	 Std: 0.00	 Min: 0.78	 Max: 0.78
+
+Epsilon upper: 0.4 	 Epsilon lower: 0.8 	 Epsilon double upper: 3.0
+Average return: 7.76	 Std: 0.00	 Min: 7.76	 Max: 7.76
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.8 	 Epsilon double upper: 1.5
+Average return: -2.24	 Std: 0.00	 Min: -2.24	 Max: -2.24
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.0
+Average return: -0.73	 Std: 0.00	 Min: -0.73	 Max: -0.73
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.5
+Average return: 4.56	 Std: 0.00	 Min: 4.56	 Max: 4.56
+
+Epsilon upper: 0.6 	 Epsilon lower: 0.8 	 Epsilon double upper: 3.0
+Average return: 4.38	 Std: 0.00	 Min: 4.38	 Max: 4.38
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.8 	 Epsilon double upper: 1.5
+Average return: 3.16	 Std: 0.00	 Min: 3.16	 Max: 3.16
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.0
+Average return: -3.21	 Std: 0.00	 Min: -3.21	 Max: -3.21
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.5
+Average return: -1.03	 Std: 0.00	 Min: -1.03	 Max: -1.03
+
+Epsilon upper: 0.8 	 Epsilon lower: 0.8 	 Epsilon double upper: 3.0
+Average return: 2.27	 Std: 0.00	 Min: 2.27	 Max: 2.27
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.8 	 Epsilon double upper: 1.5
+Average return: 0.43	 Std: 0.00	 Min: 0.43	 Max: 0.43
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.0
+Average return: -4.39	 Std: 0.00	 Min: -4.39	 Max: -4.39
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.5
+Average return: 3.04	 Std: 0.00	 Min: 3.04	 Max: 3.04
+
+Epsilon upper: 1.0 	 Epsilon lower: 0.8 	 Epsilon double upper: 3.0
+Average return: -0.79	 Std: 0.00	 Min: -0.79	 Max: -0.79
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.8 	 Epsilon double upper: 1.5
+Average return: -3.93	 Std: 0.00	 Min: -3.93	 Max: -3.93
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.0
+Average return: 7.45	 Std: 0.00	 Min: 7.45	 Max: 7.45
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.5
+Average return: 3.29	 Std: 0.00	 Min: 3.29	 Max: 3.29
+
+Epsilon upper: 1.2 	 Epsilon lower: 0.8 	 Epsilon double upper: 3.0
+Average return: -2.33	 Std: 0.00	 Min: -2.33	 Max: -2.33
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.8 	 Epsilon double upper: 1.5
+Average return: 3.37	 Std: 0.00	 Min: 3.37	 Max: 3.37
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.0
+Average return: 2.81	 Std: 0.00	 Min: 2.81	 Max: 2.81
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.5
+Average return: 10.79	 Std: 0.00	 Min: 10.79	 Max: 10.79
+
+Epsilon upper: 1.4 	 Epsilon lower: 0.8 	 Epsilon double upper: 3.0
+Average return: -1.38	 Std: 0.00	 Min: -1.38	 Max: -1.38
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.8 	 Epsilon double upper: 1.5
+Average return: 0.42	 Std: 0.00	 Min: 0.42	 Max: 0.42
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.0
+Average return: 4.10	 Std: 0.00	 Min: 4.10	 Max: 4.10
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.5
+Average return: 4.84	 Std: 0.00	 Min: 4.84	 Max: 4.84
+
+Epsilon upper: 1.6 	 Epsilon lower: 0.8 	 Epsilon double upper: 3.0
+Average return: 1.53	 Std: 0.00	 Min: 1.53	 Max: 1.53
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.8 	 Epsilon double upper: 1.5
+Average return: 4.19	 Std: 0.00	 Min: 4.19	 Max: 4.19
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.0
+Average return: 6.10	 Std: 0.00	 Min: 6.10	 Max: 6.10
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.5
+Average return: 1.47	 Std: 0.00	 Min: 1.47	 Max: 1.47
+
+Epsilon upper: 1.8 	 Epsilon lower: 0.8 	 Epsilon double upper: 3.0
+Average return: 0.12	 Std: 0.00	 Min: 0.12	 Max: 0.12
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.8 	 Epsilon double upper: 1.5
+Average return: 5.50	 Std: 0.00	 Min: 5.50	 Max: 5.50
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.0
+Average return: 5.79	 Std: 0.00	 Min: 5.79	 Max: 5.79
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.8 	 Epsilon double upper: 2.5
+Average return: 4.53	 Std: 0.00	 Min: 4.53	 Max: 4.53
+
+Epsilon upper: 2.0 	 Epsilon lower: 0.8 	 Epsilon double upper: 3.0
+Average return: 5.39	 Std: 0.00	 Min: 5.39	 Max: 5.39
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.0 	 Epsilon double upper: 1.5
+Average return: -9.85	 Std: 0.00	 Min: -9.85	 Max: -9.85
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.0
+Average return: 6.21	 Std: 0.00	 Min: 6.21	 Max: 6.21
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.5
+Average return: 2.03	 Std: 0.00	 Min: 2.03	 Max: 2.03
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.0 	 Epsilon double upper: 3.0
+Average return: -3.50	 Std: 0.00	 Min: -3.50	 Max: -3.50
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.0 	 Epsilon double upper: 1.5
+Average return: -3.49	 Std: 0.00	 Min: -3.49	 Max: -3.49
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.0
+Average return: 1.66	 Std: 0.00	 Min: 1.66	 Max: 1.66
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.5
+Average return: 2.94	 Std: 0.00	 Min: 2.94	 Max: 2.94
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.0 	 Epsilon double upper: 3.0
+Average return: 3.20	 Std: 0.00	 Min: 3.20	 Max: 3.20
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.0 	 Epsilon double upper: 1.5
+Average return: 2.62	 Std: 0.00	 Min: 2.62	 Max: 2.62
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.0
+Average return: 3.71	 Std: 0.00	 Min: 3.71	 Max: 3.71
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.5
+Average return: 7.13	 Std: 0.00	 Min: 7.13	 Max: 7.13
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.0 	 Epsilon double upper: 3.0
+Average return: 4.10	 Std: 0.00	 Min: 4.10	 Max: 4.10
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.0 	 Epsilon double upper: 1.5
+Average return: 2.99	 Std: 0.00	 Min: 2.99	 Max: 2.99
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.0
+Average return: 4.95	 Std: 0.00	 Min: 4.95	 Max: 4.95
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.5
+Average return: 1.65	 Std: 0.00	 Min: 1.65	 Max: 1.65
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.0 	 Epsilon double upper: 3.0
+Average return: 2.56	 Std: 0.00	 Min: 2.56	 Max: 2.56
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.0 	 Epsilon double upper: 1.5
+Average return: 7.18	 Std: 0.00	 Min: 7.18	 Max: 7.18
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.0
+Average return: 9.59	 Std: 0.00	 Min: 9.59	 Max: 9.59
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.5
+Average return: 0.46	 Std: 0.00	 Min: 0.46	 Max: 0.46
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.0 	 Epsilon double upper: 3.0
+Average return: 6.72	 Std: 0.00	 Min: 6.72	 Max: 6.72
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.0 	 Epsilon double upper: 1.5
+Average return: -2.43	 Std: 0.00	 Min: -2.43	 Max: -2.43
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.0
+Average return: -3.90	 Std: 0.00	 Min: -3.90	 Max: -3.90
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.5
+Average return: 1.31	 Std: 0.00	 Min: 1.31	 Max: 1.31
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.0 	 Epsilon double upper: 3.0
+Average return: 1.36	 Std: 0.00	 Min: 1.36	 Max: 1.36
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.0 	 Epsilon double upper: 1.5
+Average return: -3.13	 Std: 0.00	 Min: -3.13	 Max: -3.13
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.0
+Average return: 5.25	 Std: 0.00	 Min: 5.25	 Max: 5.25
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.5
+Average return: -0.89	 Std: 0.00	 Min: -0.89	 Max: -0.89
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.0 	 Epsilon double upper: 3.0
+Average return: 3.26	 Std: 0.00	 Min: 3.26	 Max: 3.26
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.0 	 Epsilon double upper: 1.5
+Average return: 4.73	 Std: 0.00	 Min: 4.73	 Max: 4.73
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.0
+Average return: 6.65	 Std: 0.00	 Min: 6.65	 Max: 6.65
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.5
+Average return: 4.85	 Std: 0.00	 Min: 4.85	 Max: 4.85
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.0 	 Epsilon double upper: 3.0
+Average return: -1.12	 Std: 0.00	 Min: -1.12	 Max: -1.12
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.0 	 Epsilon double upper: 1.5
+Average return: 7.26	 Std: 0.00	 Min: 7.26	 Max: 7.26
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.0
+Average return: -2.67	 Std: 0.00	 Min: -2.67	 Max: -2.67
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.5
+Average return: 5.34	 Std: 0.00	 Min: 5.34	 Max: 5.34
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.0 	 Epsilon double upper: 3.0
+Average return: 8.34	 Std: 0.00	 Min: 8.34	 Max: 8.34
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.0 	 Epsilon double upper: 1.5
+Average return: 4.85	 Std: 0.00	 Min: 4.85	 Max: 4.85
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.0
+Average return: 4.35	 Std: 0.00	 Min: 4.35	 Max: 4.35
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.0 	 Epsilon double upper: 2.5
+Average return: -0.16	 Std: 0.00	 Min: -0.16	 Max: -0.16
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.0 	 Epsilon double upper: 3.0
+Average return: 3.94	 Std: 0.00	 Min: 3.94	 Max: 3.94
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.2 	 Epsilon double upper: 1.5
+Average return: 4.14	 Std: 0.00	 Min: 4.14	 Max: 4.14
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.0
+Average return: -8.24	 Std: 0.00	 Min: -8.24	 Max: -8.24
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.5
+Average return: 2.66	 Std: 0.00	 Min: 2.66	 Max: 2.66
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.2 	 Epsilon double upper: 3.0
+Average return: 7.24	 Std: 0.00	 Min: 7.24	 Max: 7.24
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.2 	 Epsilon double upper: 1.5
+Average return: -1.95	 Std: 0.00	 Min: -1.95	 Max: -1.95
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.0
+Average return: -2.38	 Std: 0.00	 Min: -2.38	 Max: -2.38
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.5
+Average return: 2.88	 Std: 0.00	 Min: 2.88	 Max: 2.88
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.2 	 Epsilon double upper: 3.0
+Average return: 12.98	 Std: 0.00	 Min: 12.98	 Max: 12.98
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.2 	 Epsilon double upper: 1.5
+Average return: 5.75	 Std: 0.00	 Min: 5.75	 Max: 5.75
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.0
+Average return: -3.09	 Std: 0.00	 Min: -3.09	 Max: -3.09
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.5
+Average return: 1.97	 Std: 0.00	 Min: 1.97	 Max: 1.97
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.2 	 Epsilon double upper: 3.0
+Average return: 11.82	 Std: 0.00	 Min: 11.82	 Max: 11.82
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.2 	 Epsilon double upper: 1.5
+Average return: -8.20	 Std: 0.00	 Min: -8.20	 Max: -8.20
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.0
+Average return: -1.48	 Std: 0.00	 Min: -1.48	 Max: -1.48
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.5
+Average return: 5.81	 Std: 0.00	 Min: 5.81	 Max: 5.81
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.2 	 Epsilon double upper: 3.0
+Average return: 2.85	 Std: 0.00	 Min: 2.85	 Max: 2.85
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.2 	 Epsilon double upper: 1.5
+Average return: -1.21	 Std: 0.00	 Min: -1.21	 Max: -1.21
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.0
+Average return: -1.00	 Std: 0.00	 Min: -1.00	 Max: -1.00
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.5
+Average return: 10.33	 Std: 0.00	 Min: 10.33	 Max: 10.33
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.2 	 Epsilon double upper: 3.0
+Average return: -4.24	 Std: 0.00	 Min: -4.24	 Max: -4.24
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.2 	 Epsilon double upper: 1.5
+Average return: -0.01	 Std: 0.00	 Min: -0.01	 Max: -0.01
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.0
+Average return: 5.61	 Std: 0.00	 Min: 5.61	 Max: 5.61
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.5
+Average return: -1.89	 Std: 0.00	 Min: -1.89	 Max: -1.89
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.2 	 Epsilon double upper: 3.0
+Average return: 3.83	 Std: 0.00	 Min: 3.83	 Max: 3.83
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.2 	 Epsilon double upper: 1.5
+Average return: 0.83	 Std: 0.00	 Min: 0.83	 Max: 0.83
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.0
+Average return: 7.56	 Std: 0.00	 Min: 7.56	 Max: 7.56
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.5
+Average return: 1.76	 Std: 0.00	 Min: 1.76	 Max: 1.76
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.2 	 Epsilon double upper: 3.0
+Average return: 2.58	 Std: 0.00	 Min: 2.58	 Max: 2.58
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.2 	 Epsilon double upper: 1.5
+Average return: 6.85	 Std: 0.00	 Min: 6.85	 Max: 6.85
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.0
+Average return: 0.75	 Std: 0.00	 Min: 0.75	 Max: 0.75
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.5
+Average return: -1.56	 Std: 0.00	 Min: -1.56	 Max: -1.56
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.2 	 Epsilon double upper: 3.0
+Average return: 2.05	 Std: 0.00	 Min: 2.05	 Max: 2.05
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.2 	 Epsilon double upper: 1.5
+Average return: 3.72	 Std: 0.00	 Min: 3.72	 Max: 3.72
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.0
+Average return: -3.47	 Std: 0.00	 Min: -3.47	 Max: -3.47
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.5
+Average return: 7.15	 Std: 0.00	 Min: 7.15	 Max: 7.15
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.2 	 Epsilon double upper: 3.0
+Average return: 1.30	 Std: 0.00	 Min: 1.30	 Max: 1.30
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.2 	 Epsilon double upper: 1.5
+Average return: -0.73	 Std: 0.00	 Min: -0.73	 Max: -0.73
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.0
+Average return: 3.39	 Std: 0.00	 Min: 3.39	 Max: 3.39
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.2 	 Epsilon double upper: 2.5
+Average return: 9.52	 Std: 0.00	 Min: 9.52	 Max: 9.52
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.2 	 Epsilon double upper: 3.0
+Average return: 3.98	 Std: 0.00	 Min: 3.98	 Max: 3.98
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.4 	 Epsilon double upper: 1.5
+Average return: -8.00	 Std: 0.00	 Min: -8.00	 Max: -8.00
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.0
+Average return: 6.27	 Std: 0.00	 Min: 6.27	 Max: 6.27
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.5
+Average return: -2.02	 Std: 0.00	 Min: -2.02	 Max: -2.02
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.4 	 Epsilon double upper: 3.0
+Average return: 2.13	 Std: 0.00	 Min: 2.13	 Max: 2.13
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.4 	 Epsilon double upper: 1.5
+Average return: -6.19	 Std: 0.00	 Min: -6.19	 Max: -6.19
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.0
+Average return: 5.62	 Std: 0.00	 Min: 5.62	 Max: 5.62
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.5
+Average return: 7.11	 Std: 0.00	 Min: 7.11	 Max: 7.11
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.4 	 Epsilon double upper: 3.0
+Average return: 7.61	 Std: 0.00	 Min: 7.61	 Max: 7.61
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.4 	 Epsilon double upper: 1.5
+Average return: 3.57	 Std: 0.00	 Min: 3.57	 Max: 3.57
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.0
+Average return: 7.38	 Std: 0.00	 Min: 7.38	 Max: 7.38
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.5
+Average return: 1.14	 Std: 0.00	 Min: 1.14	 Max: 1.14
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.4 	 Epsilon double upper: 3.0
+Average return: 10.78	 Std: 0.00	 Min: 10.78	 Max: 10.78
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.4 	 Epsilon double upper: 1.5
+Average return: 2.82	 Std: 0.00	 Min: 2.82	 Max: 2.82
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.0
+Average return: -4.05	 Std: 0.00	 Min: -4.05	 Max: -4.05
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.5
+Average return: 12.04	 Std: 0.00	 Min: 12.04	 Max: 12.04
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.4 	 Epsilon double upper: 3.0
+Average return: 3.37	 Std: 0.00	 Min: 3.37	 Max: 3.37
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.4 	 Epsilon double upper: 1.5
+Average return: 5.73	 Std: 0.00	 Min: 5.73	 Max: 5.73
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.0
+Average return: -0.32	 Std: 0.00	 Min: -0.32	 Max: -0.32
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.5
+Average return: 1.06	 Std: 0.00	 Min: 1.06	 Max: 1.06
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.4 	 Epsilon double upper: 3.0
+Average return: 3.77	 Std: 0.00	 Min: 3.77	 Max: 3.77
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.4 	 Epsilon double upper: 1.5
+Average return: 8.23	 Std: 0.00	 Min: 8.23	 Max: 8.23
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.0
+Average return: 0.77	 Std: 0.00	 Min: 0.77	 Max: 0.77
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.5
+Average return: -1.12	 Std: 0.00	 Min: -1.12	 Max: -1.12
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.4 	 Epsilon double upper: 3.0
+Average return: 3.43	 Std: 0.00	 Min: 3.43	 Max: 3.43
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.4 	 Epsilon double upper: 1.5
+Average return: -0.29	 Std: 0.00	 Min: -0.29	 Max: -0.29
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.0
+Average return: -3.78	 Std: 0.00	 Min: -3.78	 Max: -3.78
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.5
+Average return: -6.54	 Std: 0.00	 Min: -6.54	 Max: -6.54
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.4 	 Epsilon double upper: 3.0
+Average return: 4.60	 Std: 0.00	 Min: 4.60	 Max: 4.60
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.4 	 Epsilon double upper: 1.5
+Average return: 3.07	 Std: 0.00	 Min: 3.07	 Max: 3.07
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.0
+Average return: 1.92	 Std: 0.00	 Min: 1.92	 Max: 1.92
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.5
+Average return: 2.49	 Std: 0.00	 Min: 2.49	 Max: 2.49
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.4 	 Epsilon double upper: 3.0
+Average return: 11.38	 Std: 0.00	 Min: 11.38	 Max: 11.38
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.4 	 Epsilon double upper: 1.5
+Average return: -3.95	 Std: 0.00	 Min: -3.95	 Max: -3.95
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.0
+Average return: 1.99	 Std: 0.00	 Min: 1.99	 Max: 1.99
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.5
+Average return: 1.95	 Std: 0.00	 Min: 1.95	 Max: 1.95
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.4 	 Epsilon double upper: 3.0
+Average return: 7.88	 Std: 0.00	 Min: 7.88	 Max: 7.88
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.4 	 Epsilon double upper: 1.5
+Average return: 8.57	 Std: 0.00	 Min: 8.57	 Max: 8.57
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.0
+Average return: 4.42	 Std: 0.00	 Min: 4.42	 Max: 4.42
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.4 	 Epsilon double upper: 2.5
+Average return: 2.92	 Std: 0.00	 Min: 2.92	 Max: 2.92
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.4 	 Epsilon double upper: 3.0
+Average return: -5.42	 Std: 0.00	 Min: -5.42	 Max: -5.42
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.6 	 Epsilon double upper: 1.5
+Average return: 0.68	 Std: 0.00	 Min: 0.68	 Max: 0.68
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.0
+Average return: 7.91	 Std: 0.00	 Min: 7.91	 Max: 7.91
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.5
+Average return: -5.34	 Std: 0.00	 Min: -5.34	 Max: -5.34
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.6 	 Epsilon double upper: 3.0
+Average return: 6.17	 Std: 0.00	 Min: 6.17	 Max: 6.17
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.6 	 Epsilon double upper: 1.5
+Average return: -4.05	 Std: 0.00	 Min: -4.05	 Max: -4.05
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.0
+Average return: 1.79	 Std: 0.00	 Min: 1.79	 Max: 1.79
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.5
+Average return: -3.53	 Std: 0.00	 Min: -3.53	 Max: -3.53
+
+Epsilon upper: 0.4 	 Epsilon lower: 1.6 	 Epsilon double upper: 3.0
+Average return: 6.96	 Std: 0.00	 Min: 6.96	 Max: 6.96
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.6 	 Epsilon double upper: 1.5
+Average return: -1.26	 Std: 0.00	 Min: -1.26	 Max: -1.26
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.0
+Average return: 2.34	 Std: 0.00	 Min: 2.34	 Max: 2.34
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.5
+Average return: -0.51	 Std: 0.00	 Min: -0.51	 Max: -0.51
+
+Epsilon upper: 0.6 	 Epsilon lower: 1.6 	 Epsilon double upper: 3.0
+Average return: 11.07	 Std: 0.00	 Min: 11.07	 Max: 11.07
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.6 	 Epsilon double upper: 1.5
+Average return: -5.25	 Std: 0.00	 Min: -5.25	 Max: -5.25
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.0
+Average return: 4.90	 Std: 0.00	 Min: 4.90	 Max: 4.90
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.5
+Average return: 4.60	 Std: 0.00	 Min: 4.60	 Max: 4.60
+
+Epsilon upper: 0.8 	 Epsilon lower: 1.6 	 Epsilon double upper: 3.0
+Average return: 3.82	 Std: 0.00	 Min: 3.82	 Max: 3.82
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.6 	 Epsilon double upper: 1.5
+Average return: 2.07	 Std: 0.00	 Min: 2.07	 Max: 2.07
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.0
+Average return: 4.13	 Std: 0.00	 Min: 4.13	 Max: 4.13
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.5
+Average return: -1.12	 Std: 0.00	 Min: -1.12	 Max: -1.12
+
+Epsilon upper: 1.0 	 Epsilon lower: 1.6 	 Epsilon double upper: 3.0
+Average return: 9.23	 Std: 0.00	 Min: 9.23	 Max: 9.23
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.6 	 Epsilon double upper: 1.5
+Average return: 3.03	 Std: 0.00	 Min: 3.03	 Max: 3.03
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.0
+Average return: 2.62	 Std: 0.00	 Min: 2.62	 Max: 2.62
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.5
+Average return: 7.98	 Std: 0.00	 Min: 7.98	 Max: 7.98
+
+Epsilon upper: 1.2 	 Epsilon lower: 1.6 	 Epsilon double upper: 3.0
+Average return: 11.63	 Std: 0.00	 Min: 11.63	 Max: 11.63
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.6 	 Epsilon double upper: 1.5
+Average return: 4.38	 Std: 0.00	 Min: 4.38	 Max: 4.38
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.0
+Average return: 4.32	 Std: 0.00	 Min: 4.32	 Max: 4.32
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.5
+Average return: 4.06	 Std: 0.00	 Min: 4.06	 Max: 4.06
+
+Epsilon upper: 1.4 	 Epsilon lower: 1.6 	 Epsilon double upper: 3.0
+Average return: 4.89	 Std: 0.00	 Min: 4.89	 Max: 4.89
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.6 	 Epsilon double upper: 1.5
+Average return: 5.90	 Std: 0.00	 Min: 5.90	 Max: 5.90
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.0
+Average return: 1.04	 Std: 0.00	 Min: 1.04	 Max: 1.04
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.5
+Average return: 1.38	 Std: 0.00	 Min: 1.38	 Max: 1.38
+
+Epsilon upper: 1.6 	 Epsilon lower: 1.6 	 Epsilon double upper: 3.0
+Average return: 3.54	 Std: 0.00	 Min: 3.54	 Max: 3.54
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.6 	 Epsilon double upper: 1.5
+Average return: -3.31	 Std: 0.00	 Min: -3.31	 Max: -3.31
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.0
+Average return: -1.17	 Std: 0.00	 Min: -1.17	 Max: -1.17
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.5
+Average return: 10.57	 Std: 0.00	 Min: 10.57	 Max: 10.57
+
+Epsilon upper: 1.8 	 Epsilon lower: 1.6 	 Epsilon double upper: 3.0
+Average return: 7.94	 Std: 0.00	 Min: 7.94	 Max: 7.94
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.6 	 Epsilon double upper: 1.5
+Average return: 10.05	 Std: 0.00	 Min: 10.05	 Max: 10.05
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.0
+Average return: 3.31	 Std: 0.00	 Min: 3.31	 Max: 3.31
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.6 	 Epsilon double upper: 2.5
+Average return: 1.37	 Std: 0.00	 Min: 1.37	 Max: 1.37
+
+Epsilon upper: 2.0 	 Epsilon lower: 1.6 	 Epsilon double upper: 3.0
+Average return: 8.55	 Std: 0.00	 Min: 8.55	 Max: 8.55
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.8 	 Epsilon double upper: 1.5
+Average return: -1.13	 Std: 0.00	 Min: -1.13	 Max: -1.13
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.8 	 Epsilon double upper: 2.0
+Average return: 2.54	 Std: 0.00	 Min: 2.54	 Max: 2.54
+
+Epsilon upper: 0.2 	 Epsilon lower: 1.8 	 Epsilon double upper: 2.5
+Average return: -5.71	 Std: 0.00	 Min: -5.71	 Max: -5.71
+

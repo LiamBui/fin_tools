@@ -33,6 +33,7 @@ class ReverseExpStrategy(object):
 		Epsilon upper: \t {:.2f} 
 		Epsilon lower: \t {:.2f} 
 		Half-life: \t {:.2f} minutes
+		Half-life2: \t {:.2f} minutes
 		Look back: \t {:.2f} minutes
 		Wait to sell: \t {} 
 		Wait to buy: \t {} 
@@ -40,7 +41,7 @@ class ReverseExpStrategy(object):
 		Epsilon puke: \t {:.2f} 
 		Epsilon resistance (optional): \t {:.2f} 
 		Epsilon support (optional): \t {:.2f}'''.format(self.epsilon_upper, self.epsilon_lower, 
-			self.halflife / 60, self.lookback / 60, self.wait_sell, self.wait_buy, self.wait_puke, 
+			self.halflife / 60, self.halflife2 / 60, self.lookback / 60, self.wait_sell, self.wait_buy, self.wait_puke, 
 			self.epsilon_puke, self.epsilon_resistance, self.epsilon_support)
 
 	def initialize_stats_exp(self, df, halflife=600):
@@ -110,7 +111,7 @@ class ReverseExpStrategy(object):
 	def run(self):
 
 		if self.verbose:
-			print 'Running basic reverse bollinger band strategy.'
+			print 'Running double reverse bollinger band strategy.'
 
 		for location in self.environment.locations:
 			df = get_data(location)
@@ -157,7 +158,7 @@ class ReverseExpStrategy(object):
 	def run_with_support_resistance(self):
 
 		if self.verbose:
-			print 'Running reverse bollinger band strategy with support and resistance.'
+			print 'Running reverse bollinger double band strategy with support and resistance.'
 
 		for location in self.environment.locations:
 			df = get_data(location)

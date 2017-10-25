@@ -1,0 +1,60 @@
+Location: C:/Users/lb/fin_tools/data/btc/20170511-20170521.log
+Average return: 18.98	 Std: 0.00	 Min: 18.98	 Max: 18.98
+Location: C:/Users/lb/fin_tools/data/btc/20170721-20170729.log
+Average return: 4.85	 Std: 0.00	 Min: 4.85	 Max: 4.85
+Epsilon Lower:	 0.2
+Total returns over 18 days:	 23.84
+Total win probability over 18 days:	 0.53
+Total loss probability over 18 days:	 0.47
+Total average win over 18 days:	 0.92
+Total average loss over 18 days:	 -0.50
+Total expected value over 18 days:	 0.26 
+
+Location: C:/Users/lb/fin_tools/data/btc/20170511-20170521.log
+Average return: 17.00	 Std: 0.00	 Min: 17.00	 Max: 17.00
+Location: C:/Users/lb/fin_tools/data/btc/20170721-20170729.log
+Average return: 4.95	 Std: 0.00	 Min: 4.95	 Max: 4.95
+Epsilon Lower:	 0.4
+Total returns over 18 days:	 21.95
+Total win probability over 18 days:	 0.45
+Total loss probability over 18 days:	 0.55
+Total average win over 18 days:	 0.99
+Total average loss over 18 days:	 -0.42
+Total expected value over 18 days:	 0.21 
+
+Location: C:/Users/lb/fin_tools/data/btc/20170511-20170521.log
+Average return: 19.21	 Std: 0.00	 Min: 19.21	 Max: 19.21
+Location: C:/Users/lb/fin_tools/data/btc/20170721-20170729.log
+Average return: 0.09	 Std: 0.00	 Min: 0.09	 Max: 0.09
+Epsilon Lower:	 0.6
+Total returns over 18 days:	 19.29
+Total win probability over 18 days:	 0.57
+Total loss probability over 18 days:	 0.43
+Total average win over 18 days:	 0.77
+Total average loss over 18 days:	 -0.53
+Total expected value over 18 days:	 0.21 
+
+Location: C:/Users/lb/fin_tools/data/btc/20170511-20170521.log
+Average return: 16.49	 Std: 0.00	 Min: 16.49	 Max: 16.49
+Location: C:/Users/lb/fin_tools/data/btc/20170721-20170729.log
+Average return: -2.05	 Std: 0.00	 Min: -2.05	 Max: -2.05
+Epsilon Lower:	 0.8
+Total returns over 18 days:	 14.43
+Total win probability over 18 days:	 0.51
+Total loss probability over 18 days:	 0.49
+Total average win over 18 days:	 0.76
+Total average loss over 18 days:	 -0.50
+Total expected value over 18 days:	 0.14 
+
+Location: C:/Users/lb/fin_tools/data/btc/20170511-20170521.log
+Average return: 12.41	 Std: 0.00	 Min: 12.41	 Max: 12.41
+Location: C:/Users/lb/fin_tools/data/btc/20170721-20170729.log
+Average return: 8.75	 Std: 0.00	 Min: 8.75	 Max: 8.75
+Epsilon Lower:	 1.0
+Total returns over 18 days:	 21.16
+Total win probability over 18 days:	 0.56
+Total loss probability over 18 days:	 0.44
+Total average win over 18 days:	 0.88
+Total average loss over 18 days:	 -0.55
+Total expected value over 18 days:	 0.25 
+
