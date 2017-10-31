@@ -33,7 +33,6 @@ class ReverseExpStrategy(object):
 		Epsilon upper: \t {:.2f} 
 		Epsilon lower: \t {:.2f} 
 		Half-life: \t {:.2f} minutes
-		Half-life2: \t {:.2f} minutes
 		Look back: \t {:.2f} minutes
 		Wait to sell: \t {} 
 		Wait to buy: \t {} 
@@ -41,7 +40,7 @@ class ReverseExpStrategy(object):
 		Epsilon puke: \t {:.2f} 
 		Epsilon resistance (optional): \t {:.2f} 
 		Epsilon support (optional): \t {:.2f}'''.format(self.epsilon_upper, self.epsilon_lower, 
-			self.halflife / 60, self.halflife2 / 60, self.lookback / 60, self.wait_sell, self.wait_buy, self.wait_puke, 
+			self.halflife / 60, self.lookback / 60, self.wait_sell, self.wait_buy, self.wait_puke, 
 			self.epsilon_puke, self.epsilon_resistance, self.epsilon_support)
 
 	def initialize_stats_exp(self, df, halflife=600):

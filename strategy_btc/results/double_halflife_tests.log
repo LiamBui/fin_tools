@@ -1,0 +1,684 @@
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 1.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 840.00
+Average return: 	 123.46
+Median return: 	 142.42
+Standard deviation of returns: 	 47.44
+Average win probability: 	 0.52
+Average loss probability: 	 0.48
+Median win probability: 	 0.52
+Median loss probability: 	 0.48
+Average win amount: 	 1.36
+Average loss amount: 	 -1.16
+Median win amount: 	 0.87
+Median loss amount: 	 -0.78
+Average highest win: 	 13.80
+Average lowest loss: 	 -8.78
+Median highest win: 	 14.40
+Median lowest loss: 	 -9.25
+Average expected value: 	 0.15
+Median expected value: 	 0.16
+Average maximum drawdown: 	 -0.24
+Median maximum drawdown: 	 -0.23
+Time of maximum drawdown: 	 2017-09-16 06:13:53.481308 to 2017-09-17 05:28:20.143607
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 1.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 815.20
+Average return: 	 80.11
+Median return: 	 56.78
+Standard deviation of returns: 	 42.71
+Average win probability: 	 0.51
+Average loss probability: 	 0.49
+Median win probability: 	 0.50
+Median loss probability: 	 0.50
+Average win amount: 	 1.18
+Average loss amount: 	 -1.03
+Median win amount: 	 0.70
+Median loss amount: 	 -0.65
+Average highest win: 	 11.34
+Average lowest loss: 	 -7.83
+Median highest win: 	 12.20
+Median lowest loss: 	 -7.42
+Average expected value: 	 0.10
+Median expected value: 	 0.07
+Average maximum drawdown: 	 -0.25
+Median maximum drawdown: 	 -0.26
+Time of maximum drawdown: 	 2017-09-01 22:46:36.003790 to 2017-09-15 06:21:14.075357
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 1.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 788.40
+Average return: 	 94.29
+Median return: 	 92.45
+Standard deviation of returns: 	 24.62
+Average win probability: 	 0.51
+Average loss probability: 	 0.49
+Median win probability: 	 0.52
+Median loss probability: 	 0.48
+Average win amount: 	 1.27
+Average loss amount: 	 -1.10
+Median win amount: 	 0.81
+Median loss amount: 	 -0.71
+Average highest win: 	 13.98
+Average lowest loss: 	 -9.05
+Median highest win: 	 10.89
+Median lowest loss: 	 -9.01
+Average expected value: 	 0.12
+Median expected value: 	 0.12
+Average maximum drawdown: 	 -0.25
+Median maximum drawdown: 	 -0.25
+Time of maximum drawdown: 	 2017-09-07 13:06:34.621130 to 2017-09-24 19:29:11.725371
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 1.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 766.20
+Average return: 	 79.82
+Median return: 	 68.88
+Standard deviation of returns: 	 53.14
+Average win probability: 	 0.51
+Average loss probability: 	 0.49
+Median win probability: 	 0.52
+Median loss probability: 	 0.48
+Average win amount: 	 1.17
+Average loss amount: 	 -1.00
+Median win amount: 	 0.73
+Median loss amount: 	 -0.66
+Average highest win: 	 10.69
+Average lowest loss: 	 -7.45
+Median highest win: 	 10.94
+Median lowest loss: 	 -7.36
+Average expected value: 	 0.10
+Median expected value: 	 0.09
+Average maximum drawdown: 	 -0.23
+Median maximum drawdown: 	 -0.20
+Time of maximum drawdown: 	 2017-08-17 19:58:31.791542 to 2017-08-22 01:33:08.799170
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 1.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 743.80
+Average return: 	 70.26
+Median return: 	 69.62
+Standard deviation of returns: 	 35.09
+Average win probability: 	 0.51
+Average loss probability: 	 0.49
+Median win probability: 	 0.51
+Median loss probability: 	 0.49
+Average win amount: 	 1.10
+Average loss amount: 	 -0.96
+Median win amount: 	 0.76
+Median loss amount: 	 -0.70
+Average highest win: 	 8.74
+Average lowest loss: 	 -6.62
+Median highest win: 	 8.17
+Median lowest loss: 	 -6.34
+Average expected value: 	 0.10
+Median expected value: 	 0.09
+Average maximum drawdown: 	 -0.22
+Median maximum drawdown: 	 -0.17
+Time of maximum drawdown: 	 2017-10-13 02:39:52.389853 to 2017-10-18 09:02:25.554003
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 1.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 719.00
+Average return: 	 129.47
+Median return: 	 121.06
+Standard deviation of returns: 	 44.23
+Average win probability: 	 0.53
+Average loss probability: 	 0.47
+Median win probability: 	 0.53
+Median loss probability: 	 0.47
+Average win amount: 	 1.30
+Average loss amount: 	 -1.07
+Median win amount: 	 0.76
+Median loss amount: 	 -0.65
+Average highest win: 	 11.77
+Average lowest loss: 	 -8.05
+Median highest win: 	 10.40
+Median lowest loss: 	 -8.26
+Average expected value: 	 0.18
+Median expected value: 	 0.17
+Average maximum drawdown: 	 -0.19
+Median maximum drawdown: 	 -0.16
+Time of maximum drawdown: 	 2017-09-18 10:34:27.582349 to 2017-09-22 14:00:33.392857
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 1.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 713.40
+Average return: 	 74.50
+Median return: 	 73.56
+Standard deviation of returns: 	 30.70
+Average win probability: 	 0.51
+Average loss probability: 	 0.49
+Median win probability: 	 0.52
+Median loss probability: 	 0.48
+Average win amount: 	 1.16
+Average loss amount: 	 -1.02
+Median win amount: 	 0.78
+Median loss amount: 	 -0.64
+Average highest win: 	 10.06
+Average lowest loss: 	 -8.39
+Median highest win: 	 9.14
+Median lowest loss: 	 -8.20
+Average expected value: 	 0.10
+Median expected value: 	 0.10
+Average maximum drawdown: 	 -0.25
+Median maximum drawdown: 	 -0.28
+Time of maximum drawdown: 	 2017-09-16 06:12:42.421994 to 2017-09-28 23:54:20.997861
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 1.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 698.60
+Average return: 	 59.07
+Median return: 	 58.07
+Standard deviation of returns: 	 30.34
+Average win probability: 	 0.51
+Average loss probability: 	 0.49
+Median win probability: 	 0.51
+Median loss probability: 	 0.49
+Average win amount: 	 1.13
+Average loss amount: 	 -0.99
+Median win amount: 	 0.75
+Median loss amount: 	 -0.65
+Average highest win: 	 9.61
+Average lowest loss: 	 -7.96
+Median highest win: 	 8.88
+Median lowest loss: 	 -7.59
+Average expected value: 	 0.09
+Median expected value: 	 0.08
+Average maximum drawdown: 	 -0.20
+Median maximum drawdown: 	 -0.20
+Time of maximum drawdown: 	 2017-10-13 12:45:35.073952 to 2017-10-18 07:30:52.329203
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 1.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 684.80
+Average return: 	 88.59
+Median return: 	 75.55
+Standard deviation of returns: 	 49.86
+Average win probability: 	 0.51
+Average loss probability: 	 0.49
+Median win probability: 	 0.50
+Median loss probability: 	 0.50
+Average win amount: 	 1.18
+Average loss amount: 	 -0.97
+Median win amount: 	 0.73
+Median loss amount: 	 -0.62
+Average highest win: 	 11.10
+Average lowest loss: 	 -8.17
+Median highest win: 	 11.79
+Median lowest loss: 	 -7.11
+Average expected value: 	 0.13
+Median expected value: 	 0.11
+Average maximum drawdown: 	 -0.19
+Median maximum drawdown: 	 -0.20
+Time of maximum drawdown: 	 2017-09-15 18:21:53.576871 to 2017-09-17 03:28:51.301319
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 1.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 676.80
+Average return: 	 83.75
+Median return: 	 89.86
+Standard deviation of returns: 	 26.17
+Average win probability: 	 0.51
+Average loss probability: 	 0.49
+Median win probability: 	 0.51
+Median loss probability: 	 0.49
+Average win amount: 	 1.14
+Average loss amount: 	 -0.93
+Median win amount: 	 0.72
+Median loss amount: 	 -0.58
+Average highest win: 	 10.62
+Average lowest loss: 	 -7.69
+Median highest win: 	 9.59
+Median lowest loss: 	 -6.39
+Average expected value: 	 0.12
+Median expected value: 	 0.13
+Average maximum drawdown: 	 -0.17
+Median maximum drawdown: 	 -0.18
+Time of maximum drawdown: 	 2017-09-18 20:58:36.606491 to 2017-09-22 10:51:36.523731
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 2.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 826.20
+Average return: 	 101.89
+Median return: 	 106.30
+Standard deviation of returns: 	 42.96
+Average win probability: 	 0.51
+Average loss probability: 	 0.49
+Median win probability: 	 0.51
+Median loss probability: 	 0.49
+Average win amount: 	 1.29
+Average loss amount: 	 -1.10
+Median win amount: 	 0.79
+Median loss amount: 	 -0.68
+Average highest win: 	 11.71
+Average lowest loss: 	 -7.97
+Median highest win: 	 11.25
+Median lowest loss: 	 -8.86
+Average expected value: 	 0.12
+Median expected value: 	 0.13
+Average maximum drawdown: 	 -0.23
+Median maximum drawdown: 	 -0.22
+Time of maximum drawdown: 	 2017-09-12 11:18:29.742800 to 2017-09-14 14:04:07.186704
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 2.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 798.80
+Average return: 	 65.15
+Median return: 	 62.16
+Standard deviation of returns: 	 36.00
+Average win probability: 	 0.48
+Average loss probability: 	 0.52
+Median win probability: 	 0.49
+Median loss probability: 	 0.51
+Average win amount: 	 1.10
+Average loss amount: 	 -0.88
+Median win amount: 	 0.72
+Median loss amount: 	 -0.63
+Average highest win: 	 12.61
+Average lowest loss: 	 -6.20
+Median highest win: 	 11.19
+Median lowest loss: 	 -6.05
+Average expected value: 	 0.08
+Median expected value: 	 0.08
+Average maximum drawdown: 	 -0.28
+Median maximum drawdown: 	 -0.28
+Time of maximum drawdown: 	 2017-09-09 04:40:54.258057 to 2017-09-15 07:53:43.078580
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 2.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 765.20
+Average return: 	 55.33
+Median return: 	 53.46
+Standard deviation of returns: 	 10.45
+Average win probability: 	 0.51
+Average loss probability: 	 0.49
+Median win probability: 	 0.51
+Median loss probability: 	 0.49
+Average win amount: 	 1.07
+Average loss amount: 	 -0.97
+Median win amount: 	 0.68
+Median loss amount: 	 -0.66
+Average highest win: 	 9.55
+Average lowest loss: 	 -6.57
+Median highest win: 	 9.75
+Median lowest loss: 	 -6.78
+Average expected value: 	 0.07
+Median expected value: 	 0.07
+Average maximum drawdown: 	 -0.28
+Median maximum drawdown: 	 -0.31
+Time of maximum drawdown: 	 2017-09-18 22:42:28.927043 to 2017-09-24 12:37:49.548713
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 2.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 746.80
+Average return: 	 79.51
+Median return: 	 83.77
+Standard deviation of returns: 	 37.31
+Average win probability: 	 0.50
+Average loss probability: 	 0.50
+Median win probability: 	 0.50
+Median loss probability: 	 0.50
+Average win amount: 	 1.21
+Average loss amount: 	 -0.99
+Median win amount: 	 0.76
+Median loss amount: 	 -0.66
+Average highest win: 	 12.92
+Average lowest loss: 	 -6.79
+Median highest win: 	 14.87
+Median lowest loss: 	 -6.51
+Average expected value: 	 0.11
+Median expected value: 	 0.11
+Average maximum drawdown: 	 -0.21
+Median maximum drawdown: 	 -0.20
+Time of maximum drawdown: 	 2017-10-14 15:30:54.555226 to 2017-10-18 06:21:16.596660
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 2.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 727.80
+Average return: 	 101.88
+Median return: 	 113.30
+Standard deviation of returns: 	 44.17
+Average win probability: 	 0.52
+Average loss probability: 	 0.48
+Median win probability: 	 0.52
+Median loss probability: 	 0.48
+Average win amount: 	 1.23
+Average loss amount: 	 -1.03
+Median win amount: 	 0.79
+Median loss amount: 	 -0.74
+Average highest win: 	 12.15
+Average lowest loss: 	 -8.64
+Median highest win: 	 11.26
+Median lowest loss: 	 -9.76
+Average expected value: 	 0.14
+Median expected value: 	 0.16
+Average maximum drawdown: 	 -0.19
+Median maximum drawdown: 	 -0.20
+Time of maximum drawdown: 	 2017-09-14 11:40:24.062149 to 2017-09-15 06:37:46.481700
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 2.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 698.60
+Average return: 	 87.14
+Median return: 	 83.41
+Standard deviation of returns: 	 19.60
+Average win probability: 	 0.50
+Average loss probability: 	 0.50
+Median win probability: 	 0.51
+Median loss probability: 	 0.49
+Average win amount: 	 1.17
+Average loss amount: 	 -0.94
+Median win amount: 	 0.73
+Median loss amount: 	 -0.64
+Average highest win: 	 10.88
+Average lowest loss: 	 -6.18
+Median highest win: 	 10.35
+Median lowest loss: 	 -5.53
+Average expected value: 	 0.13
+Median expected value: 	 0.12
+Average maximum drawdown: 	 -0.22
+Median maximum drawdown: 	 -0.22
+Time of maximum drawdown: 	 2017-09-11 00:12:19.621758 to 2017-09-15 07:55:51.058072
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 2.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 704.00
+Average return: 	 88.70
+Median return: 	 85.98
+Standard deviation of returns: 	 30.94
+Average win probability: 	 0.50
+Average loss probability: 	 0.50
+Median win probability: 	 0.49
+Median loss probability: 	 0.51
+Average win amount: 	 1.20
+Average loss amount: 	 -0.95
+Median win amount: 	 0.75
+Median loss amount: 	 -0.65
+Average highest win: 	 12.27
+Average lowest loss: 	 -9.28
+Median highest win: 	 10.46
+Median lowest loss: 	 -7.99
+Average expected value: 	 0.13
+Median expected value: 	 0.12
+Average maximum drawdown: 	 -0.19
+Median maximum drawdown: 	 -0.23
+Time of maximum drawdown: 	 2017-09-15 12:39:00.916673 to 2017-09-15 19:23:16.896304
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 2.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 683.00
+Average return: 	 93.31
+Median return: 	 91.08
+Standard deviation of returns: 	 28.89
+Average win probability: 	 0.51
+Average loss probability: 	 0.49
+Median win probability: 	 0.51
+Median loss probability: 	 0.49
+Average win amount: 	 1.31
+Average loss amount: 	 -1.09
+Median win amount: 	 0.79
+Median loss amount: 	 -0.71
+Average highest win: 	 14.11
+Average lowest loss: 	 -9.79
+Median highest win: 	 15.16
+Median lowest loss: 	 -10.37
+Average expected value: 	 0.14
+Median expected value: 	 0.14
+Average maximum drawdown: 	 -0.18
+Median maximum drawdown: 	 -0.18
+Time of maximum drawdown: 	 2017-09-19 02:25:07.703095 to 2017-09-22 20:20:35.164206
+
+	 	 --------- Analysis Report ---------
+Reverse Exponential Strategy with following parameters: 
+		Epsilon upper: 	 0.60 
+		Epsilon lower: 	 0.60 
+		Half-life: 	 2.00 minutes
+		Look back: 	 60.00 minutes
+		Wait to sell: 	 0:20:00 
+		Wait to buy: 	 0:05:00 
+		Wait to puke: 	 0:01:00 
+		Epsilon puke: 	 2.00 
+		Epsilon resistance (optional): 	 5.00 
+		Epsilon support (optional): 	 5.00
+	 ---------------------------------------------
+Total number of days analyzed: 	 81
+Average number of trades: 	 659.40
+Average return: 	 75.34
+Median return: 	 79.74
+Standard deviation of returns: 	 15.89
+Average win probability: 	 0.51
+Average loss probability: 	 0.49
+Median win probability: 	 0.51
+Median loss probability: 	 0.49
+Average win amount: 	 1.17
+Average loss amount: 	 -0.97
+Median win amount: 	 0.75
+Median loss amount: 	 -0.63
+Average highest win: 	 9.97
+Average lowest loss: 	 -6.91
+Median highest win: 	 9.78
+Median lowest loss: 	 -7.07
+Average expected value: 	 0.11
+Median expected value: 	 0.12
+Average maximum drawdown: 	 -0.19
+Median maximum drawdown: 	 -0.20
+Time of maximum drawdown: 	 2017-08-13 20:43:59.745845 to 2017-08-21 22:50:03.231606
+
