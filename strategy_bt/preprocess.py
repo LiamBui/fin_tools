@@ -5,6 +5,7 @@ Files obtained from https://api.bitcoincharts.com/v1/csv/
 import pandas as pd
 import datetime, random
 
+# TODO: implement better way of getting data that does not involve manual
 def prompt():
 	exchange_name = raw_input('Input exchange name: ')
 	date = raw_input('Input date of file: ')

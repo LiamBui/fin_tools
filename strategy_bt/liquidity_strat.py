@@ -3,7 +3,6 @@ import pandas as pd
 import preprocess, queue
 from scipy import stats
 
-# df1 = primary exchange, i.e., coinbase
 def run(df1, df2):
 	# merged, keeping only last of non-unique indices
 	df1 = df1[~df1.index.duplicated(keep='last')]
